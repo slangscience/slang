@@ -46,140 +46,8 @@
 	<!--[if lt IE 9]>
 		<script src="js/html5shiv.js"></script>
 	<![endif]-->
-	<style>
-		.slider {
-		  height: 835%;
-		  position: relative;
-		  overflow: hidden;
-		  display: -webkit-box;
-		  display: -webkit-flex;
-		  display: -ms-flexbox;
-		  display: flex;
-		  -webkit-flex-flow: row nowrap;
-		  -ms-flex-flow: row nowrap;
-		  flex-flow: row nowrap;
-		  -webkit-box-align: end;
-		  -webkit-align-items: flex-end;
-		  -ms-flex-align: end;
-		  align-items: flex-end;
-		  -webkit-box-pack: center;
-		  -webkit-justify-content: center;
-		  -ms-flex-pack: center;
-		  justify-content: center;
-		}
-
-		.slider__nav {
-		  width: 23px;
-		  height: 23px;
-		  margin: 15px;
-		  position: relative;
-		  top: -6262px;
-		  border-radius: 10%;
-		  z-index: 10;
-		  outline: 3px solid #ccc;
-		  outline-offset: -5px;
-		  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
-		  cursor: pointer;
-		  -webkit-appearance: none;
-		  -moz-appearance: none;
-		  appearance: none;
-		  -webkit-backface-visibility: hidden;
-		  backface-visibility: hidden;
-		}
-
-		.slider__nav:checked {
-		  -webkit-animation: check 0.5s linear forwards;
-		  animation: check 0.5s linear forwards;
-		}
-
-		.slider__nav:checked:nth-of-type(1) ~ .slider__inner {
-		  -webkit-transform: translateX(0%);
-		  transform: translateX(0%);
-		}
-
-		.slider__nav:checked:nth-of-type(2) ~ .slider__inner {
-		  -webkit-transform: translateX(-50%);
-		  transform: translateX(-50%);
-		}
-
-		.slider__inner {
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		  width: 200%;
-		  height: 100%;
-		  -webkit-transition: all 1s ease-out;
-		  transition: all 1s ease-out;
-		  display: -webkit-box;
-		  display: -webkit-flex;
-		  display: -ms-flexbox;
-		  display: flex;
-		  -webkit-flex-flow: row nowrap;
-		  -ms-flex-flow: row nowrap;
-		  flex-flow: row nowrap;
-		}
-
-		.slider__contents {
-		  height: 100%;
-		  padding: 2rem;
-		  text-align: center;
-		  display: -webkit-box;
-		  display: -webkit-flex;
-		  display: -ms-flexbox;
-		  display: flex;
-		  -webkit-box-flex: 1;
-		  -webkit-flex: 1;
-		  -ms-flex: 1;
-		  flex: 1;
-		  -webkit-flex-flow: column nowrap;
-		  -ms-flex-flow: column nowrap;
-		  flex-flow: column nowrap;
-		  -webkit-box-align: center;
-		  -webkit-align-items: center;
-		  -ms-flex-align: center;
-		  align-items: center;
-		  -webkit-box-pack: center;
-		  -webkit-justify-content: center;
-		  -ms-flex-pack: center;
-		  justify-content: center;
-		}
-
-		.slider__image { font-size: 2.7rem; }
-
-		.slider__caption {
-		  font-weight: 700;
-		  margin: 2rem 0 1rem;
-		  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-		  text-transform: uppercase;
-		}
-
-		.slider__txt {
-		  color: #999;
-		  margin-bottom: 3rem;
-		  max-width: 300px;
-		}
-
-		 @-webkit-keyframes 
-		check {  50% {
-		 outline-color: #333;
-		 box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
-		}
-		 100% {
-		 outline-color: #333;
-		 box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
-		}
-		}
-		 @keyframes 
-		check {  50% {
-		 outline-color: #333;
-		 box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
-		}
-		 100% {
-		 outline-color: #333;
-		 box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
-		}
-		}
-	</style>
+	<!-- css style for Navigating Slides -->
+	<link rel="stylesheet" href="css/csslider.css" />
 
 </head>
 
@@ -239,21 +107,6 @@
 			
 		</div>
     </div>
-<!-- 
-    <div class="intro-header">
-		<div id="Notification" class="col-md-6 col-md-offset-3 text-center wrap_title text-center abcen1 mask">
-			<h2 class="h2_home wow fadeIn" data-wow-delay="0.4s">通知</h2>
-			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s"><a href="http://www.yjsy.ecnu.edu.cn/67/7f/c3610a157567/page.htm">关于申报研究生国际学术会议专项基金资助的通知</a></h3>
-			<ul class="list-inline">
-				<li><a class="imgcircle wow bounceInUp" data-wow-duration="0.2s"  href="#Research"> <img class="img_scroll" src="img/icon/circle.png" alt=""> </a>
-				</li>
-			</ul>
-		</div>     -->
-        <!-- /.container -->
-		<!-- <div class="col-xs-12 text-center abcen wow fadeIn">
-			
-		</div>
-    </div> -->
     
     <!-- Credits -->
 	<div id="Research" class="content-section-a">
@@ -841,249 +694,221 @@
 
 
 	<!-- Publications -->
-	<div class="slider">
+	<div id="Publications" class="content-section-b">
+		
+		<div class="csslider">
+		    <input type="radio" name="slides" id="slides_1" checked />
+		    <input type="radio" name="slides" id="slides_2" />
+		    <ul>
+		        <li class="scrollable">
+		        	<h2>发表文章</h2>
 
-	  	<input type="radio" name="slider" title="slide1" class="slider__nav"/>
-		<input type="radio" name="slider" title="slide2" class="slider__nav"/>
+					<h4 style="text-align:left;">
+					    &LongLeftArrow;	 Topic Order
+					    <span style="float:right;">
+					        Chronological Order &LongRightArrow;
+					    </span>
+					</h4>
 
-	  	<div class="slider__inner">
+		        	<h3>Speech Perception and Production</h3>
+		        	<br>
+		        	<blockquote><p class="to_left"><a href="papers/Yu2021_Article_AlteredBrainActivityInTheBilat.pdf">Yu, L., Guo, L., Fang, X., Yang, F., Chen, Y., Wang, Y., ... & Zhang, C. (2021). Altered brain activity in the bilateral frontal cortices and neural correlation with cognitive impairment in schizophrenia. <em>Brain imaging and behavior</em>, 1-9. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Liu2021_Article_MultipleProsodicMeaningsAreCon.pdf">Liu, X., Xu, Y., Zhang, W., & Tian, X. (2021). Multiple prosodic meanings are conveyed through separate pitch ranges: Evidence from perception of focus and surprise in Mandarin Chinese. <em>Cognitive, Affective, & Behavioral Neuroscience</em>, 1-12. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia.pdf">Yang, F., Zhu, H., Yu, L., Lu, W., Zhang, C., & Tian, X. (2021). Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia. <em>Behavioural Brain Research</em>, 113411. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Manual Gestures Modulate Early Neural Responses in Loudness Perception.pdf">Sun, J., Wang, Z., & Tian, X. (2021). Manual Gestures Modulate Early Neural Responses in Loudness Perception. <em>Frontiers in neuroscience</em>, 1106. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Neural substrates of Chinese lexical production.pdf">Tao, L., Zhu, M., & Cai, Q. (2020). Neural substrates of Chinese lexical production: The role of domain-general cognitive functions. <em>Neuropsychologia</em>, 138, 107354. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Functional Status of Hypothalamic–Pituitary–Thyroid and Hypothalamic–Pituitary–Adrenal Axes in Hospitalized Schizophrenics in Shanghai.pdf">Zhu, Y., Ji, H., Tao, L., Cai, Q., Wang, F., Ji, W., ... & Fang, Y. (2020). Functional Status of Hypothalamic–Pituitary–Thyroid and Hypothalamic–Pituitary–Adrenal Axes in Hospitalized Schizophrenics in Shanghai. <em>Frontiers in Psychiatry</em>, 11. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Corollary discharge versus efference copy.pdf">Li, S., Zhu, H., & Tian, X. (2020). Corollary discharge versus efference copy: Distinct neural signals in speech preparation differentially modulate auditory responses. <em>Cerebral Cortex</em>, bhaa154. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Multi-scale predictions distinctively modulate tone perception in schizophrenia patients with auditory verbal hallucinations.pdf">Yang, F., Zhu, H., Yu, L., Lu, W., Zhang, C., & Tian, X. (2020) Multi-scale predictions distinctively modulate tone perception in schizophrenia patients with auditory verbal hallucinations. <em>bioRxiv</em>, 204495. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The dynamic and task dependent representational transformation between the motor and sensory systems during speech production.pdf">Zhang, W., Liu, Y., Wang, X., & Tian, X. (2020). The Dynamic and Task-dependent Representational Transformation Between the Motor and Sensory Systems during Speech Production. <em>Cognitive Neuroscience</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Constraint structure of ancient Chinese poetry facilitates speech content grouping.pdf"> Teng, X., Ma, M., Yang, J., Blohm, S., Cai, Q., & Tian, X. (2020) Constraint structure of ancient Chinese poetry facilitates speech content grouping. <em>Current Biology</em>, 30(7), 1299-1305. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Mental operations in rhythm.pdf"> Li, Y., Luo, H., & Tian, X. (2020). Mental operations in rhythm: Motor-to-sensory transformation mediates imagined singing. <em>PLoS biology</em>, 18(10), e3000504. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Effects and potential mechanisms of transcranial direct current stimulation (tDCS) on auditory hallucinations.pdf">Yang, F., Fang, X., Tang, W., Hui, L., Chen, Y., Zhang, C., & Tian, X. (2019). Effects and potential mechanisms of transcranial direct current stimulation (tDCS) on auditory hallucinations: A meta-analysis. <em>Psychiatry research</em>, 273, 343. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Revealing the Temporal Dynamics in Noninvasive Electrophysiological recordings with Topography-based Analyses.pdf"> Wang, X., Zhu, H., & Tian, X. (2019). Revealing the Temporal Dynamics in Non-invasive Electrophysiological recordings with Topography-based Analyses. <em>bioRxiv</em>, 779546. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Distinct Mechanisms of Imagery Differentially Influence Speech Perception.pdf"> Ma, O., & Tian, X. (2019). Distinct mechanisms of imagery differentially influence speech perception. <em>eNeuro</em>, 6(5). (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Theta band oscillations reflect more than entrainment behavioral and neural evidence demonstrates an active chunking process.pdf">Teng, X., Tian, X., Doelling, K., & Poeppel, D. (2018). Theta band oscillations reflect more than entrainment: behavioral and neural evidence demonstrates an active chunking process. <em>European Journal of Neuroscience</em>, 48(8), 2770-2782. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Group-Level Multivariate Analysis in EasyEEG Toolbox.pdf">Yang, J., Zhu, H., & Tian, X. (2018). Group-Level Multivariate Analysis in EasyEEG Toolbox: Examining the Temporal Dynamics Using Topographic Responses. <em>Frontiers in neuroscience</em>, 12. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Tian_etal_2018_Nat_Hum_Beh.pdf">Tian, X., Ding, N., Teng, X., Bai, F., & Poeppel, D. (2018). Imagined speech influences perceived loudness of sound. <em>Nature Human Behaviour</em>, 2(3), 225. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Concurrent temporal channels for auditory processing.pdf">Teng, X., Tian, X., Rowland, J.,&amp;Poeppel, D. (2017). Concurrent temporal channels for auditory processing: Oscillatory neural entrainment reveals segregation of function at different scales. <em> PLoS biology</em>, 15(11), e2000812.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Testing multi-scale processing in the auditory system.pdf">Teng, X., Tian, X., &amp; Poeppel, D.(2016). Testing multi-scale processing in the auditory system. <em>Scientific Reports</em>, 6, 34390. doi:10.1038/srep34390(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Mental imagery of speech implicates two mechanisms of perceptual reactivation.pdf">Tian, X., Zarate, J.M., Poeppel, D.(2016). Mental imagery of speech implicates two mechanisms of perceptual reactivation. <em>Cortex</em>. 77, 1-12. doi: 10.1016/j.cortex.2016.01.002(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Cortical tracking of hierarchical linguistic structure in connected speech.pdf">Ding, N., Melloni, L., Zhang, H., Tian,X., Poeppel, D. (2016). Cortical tracking of hierarchical linguistic structure in connected speech. <em>Nature Neuroscience</em>.19(1), 158-164.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Haegen_etal_2016.pdf">Van der Haegen, L., Acke, F., Vingerhoets, G., Dhooge, I., De Leenheer, E., Cai, Q.*, Brysbaert, M. Laterality and unilateral deafness: Patients with congenital right ear deafness do not develop atypical language dominance.<em> Neuropsychologia.</em>(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Dynamics of self-monitoring and error detection in speech production.pdf">Tian, X., &amp; Poeppel, D. (2015). Dynamics of self-monitoring and error detection in speech production: evidence from mental imagery MEG.  <em>Journal of Cognitive Neuroscience.</em> 27(2), 352-364.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Multiple levels of linguistic and paralinguistic features contribute to voice recognition.pdf">Zarate, J.M.<em>, Tian, X.</em>, Woods, K.J.P.,&amp; Poeppel, D. (2015). Multiple levels of linguistic and paralinguistic features contribute to voice recognition. <em>Scientific Reports</em>. 5: 11475. doi: 10.1038/srep11475 (*equal contribution)(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The effect of imagination on stimulation.pdf">Tian, X., &amp; Poeppel, D. (2013). The effect of imagination on stimulation: the functional specificity of efference copies in speech processing.  <em>Journal of Cognitive Neuroscience.</em> 25(7), 1020-1036.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Change detection through connectivity reduction.pdf">Tian, X., &amp; Huber, D.E. (2013). Playing ‘Duck Duck Goose’ with neurons: Change detection through connectivity reduction. <em>Psychological Science</em>.24(6), 819–827.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Mental imagery of speech linking motor and sensory systems through internals imulation.pdf">Tian, X., &amp; Poeppel, D. (2012). Mental imagery of speech: linking motor and sensory systems through internals imulation. <em>Front. Hum. Neurosci.</em> 6:314. doi: 10.3389/fnhum.2012.00314(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/TopoToolbox.pdf">Tian, X., Poeppel, D., &amp; Huber, D.E. (2011). TopoToolbox: Using sensor topography to calculate psychologically meaningful measures from event-related EEG/MEG. <em>Computational Intelligence and Neuroscience</em>. 2011,doi:10.1155/2011/674605(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Mental imagery of speech andmovement implicates the dynamics of internal forward models.pdf">Tian, X., &amp; Poeppel, D. (2010). Mental imagery of speech andmovement implicates the dynamics of internal forward models. <em>Front. Psychology,</em> 1:166. doi: 10.3389/fpsyg.2010.00166(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Measures of spatial similarity and response magnitude in MEG andscalp EEG.pdf">Tian, X., &amp; Huber,D.E. (2008). Measures of spatial similarity and response magnitude in MEG andscalp EEG. <em>Brain Topography</em>, <em>20</em>,131-141.(PDF)</a></p></blockquote>
 
-		    <div class="slider__contents">
-			    <div id="Publications" class="content-section-b" style="border-top: 0">
-					<div class="container">
-						<div class="col-md-6 col-md-offset-3 text-center wrap_title">
-							<h2>发表文章</h2>
-							<br>
-							<h4> &nbsp; &nbsp; &nbsp;&nbsp;Topic Order &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Chronological</h4>
-						</div>
+					<h3>Visual Word Perception and Language Acquisition</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Effects of cumulative language exposure.pdf">Tao, L., Cai, Q., & Gollan, T. H. (2021). Effects of cumulative language exposure on heritage and majority language skills: Spanish and Mandarin heritage speakers in the USA. <em>Linguistic Approaches to Bilingualism</em>, 11(2), 168-191. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/How Do We Segment Text.pdf"> Yang, J., Cai, Q., & Tian, X. (2020). How do we segment text? Two-stage chunking operation in reading. <em>eNeuro</em>, 7(3), 0425-19.2020. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/NewPerspectivesontheAgingLexicon.pdf">Wulff, D. U., De Deyne, S., Jones, M. N., Mata, R., & Aging Lexicon Consortium. (2019). New perspectives on the aging lexicon. <em>Trends in cognitive sciences</em>, 23(8), 686-698. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Effects of cumulative language exposure on heritage and majority language skills.pdf"> Tao, L., Cai, Q., & Gollan, T. H. (2019). Effects of cumulative language exposure on heritage and majority language skills: Spanish and Mandarin heritage speakers in the USA. <em>Linguistic Approaches to Bilingualism</em>. (PDF)</a></p></blockquote>	
+					<blockquote><p class="to_left"><a href="papers/Interhemispheric communication influences reading behavior.pdf">Van der Haegen, L., Cai, Q., Stevens, M.A., and Brysbaert, M. (2013). Interhemispheric communication influences reading behavior.<em> Journal of Cognitive Neuroscience</em>25(9): 1442-1452.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The effects of visual imagery on face identification.pdf">Wu, J., Duan, H., Tian, X., Wang, P.,&amp; Zhang, K. (2012). The effects of visual imagery on face identification: an ERP study. <em>Front. Hum. Neurosci.</em> 6:305. doi: 10.3389/fnhum.2012.00305(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/SUBTLEXCH Chinese word and character frequencies based on film subtitles.pdf">Cai, Q.*, and Brysbaert, M. *(2010). *SUBTLEX-CH: Chinese word and character frequencies based on film subtitles. PLoS One 5(6): e10729.(PDF) (Chinese word frequencies.</a> Online search: <a href='http://crr.ugent.be/isubtlex_ch/' target='_blank' >http://crr.ugent.be/isubtlex_ch/</a>)</p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Testing an associative account of semantic satiation.pdf">Tian, X., &amp; Huber, D.E. (2010). Testing an associative account of semantic satiation. <em>Cognitive Psychology,60</em>, 267-290.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Early involvement of dorsal and ventral pathways in visual word recognition.pdf">Rosazza, C., Cai, Q., Minati, L., Paulignan, Y., and Nazir, T.A. (2009). Early involvement of dorsal and ventral pathways in visual word recognition: An ERP study. <em>Brain Res</em> 1272: 32-44.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The Dynamics of Integration and Separation.pdf">Huber, D. E., Tian, X., Curran, T., O’Reilly, C, &amp; Woroch, B. (2008). The dynamics of integration and separation: ERP, MEG, and neural network studies of immediate repetition effects. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, 34,1389-1416.(PDF)</a></p></blockquote>
 
-						<div class="row">
-							<div class="col-md-12 wrap_title">
+					<h3>Language Comprehension and Lateralization</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Bilingualism and domain-general cognitive.pdf">Tao, L., Wang, G., Zhu, M., & Cai, Q. (2021). Bilingualism and domain-general cognitive functions from a neural perspective: A systematic review. <em>Neuroscience & Biobehavioral Reviews</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/A Cross-linguistic Study into the Contribution.pdf">De Deyne, S., Cabana, Á., Li, B., Cai, Q., & McKague, M. (2020). A Cross-linguistic Study into the Contribution of Affective Connotation in the Lexico-semantic Representation of Concrete and Abstract Concepts. <em>CogSci</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Lateralization in the dichotic listening of tones is influenced by the content of speech.pdf"> Mei, N., Flinker, A., Zhu, M., Cai, Q., & Tian, X. (2020). Lateralization in the dichotic listening of tones is influenced by the content of speech. <em>Neuropsychologia</em>, 140, 107389. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Lateralization of Language.pdf">Van der Haegen, L., & Cai, Q. (2019). Lateralization of language. In <em>The Oxford Handbook of Neurolinguistics</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Brain Functional Organization Associated With Language Lateralization.pdf">Wang, S., Van der Haegen, L., Tao, L., & Cai, Q. (2019). Brain Functional Organization Associated With Language Lateralization. <em>Cerebral Cortex</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Effects of early home language environment II.pdf">Tao, L., & Cai, Q. (2018). Effects of early home language environment II: Speech comprehension and cognitive functions. <em>Bilingualism: Language and Cognition</em>, 21(3), 537-549. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Rule based and word level statistics based processing of language.pdf">Ding, N., Melloni, L., Tian, X., &amp;Poeppel, D. (2016). Rule-based and word-level statistics-based processing of language: insights from neuroscience. <em>Language,Cognition and Neuroscience</em>, 1-6. doi: 10.1080/23273798.2016.1215477(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/A new human-specific brain landmark- The depth asymmetry of superior temporal sulcus.pdf">Leroy, F., Cai,  Q., Bogart, S., Dubois, J., Coulon, O., Monzalvo, K., Fischer, C., Glasel, H., Van der Haegen, L., Benezit, A., Lin, C.P., Kennedy, D., Ihara, A.S., Hertz-Pannier, L., Moutard, M.L., Poupon, C., Brysbaert, M., Roberts, N., Hopkins, W., Mangin, J.F., Dehaene-Lambertz, G. (2015) A new human-specific brain landmark: The depth asymmetry of superior temporal sulcus. <em>Proc Natl Acad Sci </em>112(4): 1208-1213.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/What can atypical language hemisphericspecialization tell us about cognitive functions.pdf">Cai, Q.*, and Van der Haegen, L. (2015). What can atypical language hemisphericspecialization tell us about cognitive functions? <em>Neurosci Bull</em> 31(2): 220-226.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/A surface-based analysis of language lateralization and cortical asymmetry.pdf">Greve, D.N., Van der Haegen, L., Cai, Q., Stufflebeam, S., Sabuncu, M.R., Fischl, B., and Brysbaert, M. (2013) A surface-based analysis of language lateralization and cortical asymmetry. <em>Journal of Cognitive Neuroscience</em>25(9): 1477-1492.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Complementary hemispheric specialization for language production and visuospatial attention.pdf">Cai, Q.*, Van der Haegen , L., and Brysbaert, M. (2013). Complementary hemispheric specialization for language production and visuospatial attention. <em>Proc Natl Acad Sci </em>110(4): E322-330.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Praxis and language are linked.pdf">Vingerhoets, G., Alderweireldt, A.S., Vandemaele, P., Cai, Q., Van der Haegen, L., Brysbaert, M., and Achten, E. (2013). Praxis and language are linked: Evidence from co-lateralization in individuals with atypical language dominance. <em>Cortex </em>49(1): 172-183.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Brain asymmetry and visual word recognition.pdf">Brysbaert, M., Cai, Q., and Van der Haegen, L. (2012). Brain asymmetry and visual word recognition: Do we have a split fovea? In J. Adelman (Ed.): <em>Visual Word Recognition</em>, Volume 1: Models and Methods, Orthography and Phonology. Hove, UK: Psychology Press.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Colateralization of Brocas area and the visual word form area in left handers.pdf">Van der Haegen , L., Cai, Q., and Brysbaert, M. (2012). Colateralization of Broca’s area and the visual word form area in left-handers: fMRI evidence. <em>Brain Lang</em> 122(3): 171-178.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Further fMRI validation of the visual half field technique as an indicator of language laterality.pdf">Van der Haegen, L., Cai, Q., Seurinck, R., and Brysbaert, M. (2011). Further fMRI validation of the visual half field technique as an indicator of language laterality: A large-group analysis. <em>Neuropsychologia </em>49: 2879-2888.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The left ventral occipitotemporal response to words depends on language lateralization but not on visual familiarity.pdf">Cai, Q.*, Paulignan, Y., Brysbaert, M., Ibarrola, D., &amp; Nazir, T.A. (2010). The left ventral occipito-temporal response to words depends on language lateralization but not on visual familiarity. <em>Cereb Cortex</em> 20: 1153–1163.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Cerebral lateralization of frontal lobe language processes and lateralization of the posterior visual word processing system.pdf">Cai, Q.*, Lavidor, M., Brysbaert, M., Paulignan, Y., and Nazir, T. A. (2008). Cerebral lateralization of frontal lobe language processes and lateralization of the posterior visual word processing system. <em>J Cogn Neurosci</em> 20: 672-681.(PDF)</a></p></blockquote>
 
-								<h3>Speech Perception and Production</h3>
-								<br>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Yu2021_Article_AlteredBrainActivityInTheBilat.pdf">Yu, L., Guo, L., Fang, X., Yang, F., Chen, Y., Wang, Y., ... & Zhang, C. (2021). Altered brain activity in the bilateral frontal cortices and neural correlation with cognitive impairment in schizophrenia. <em>Brain imaging and behavior</em>, 1-9. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Liu2021_Article_MultipleProsodicMeaningsAreCon.pdf">Liu, X., Xu, Y., Zhang, W., & Tian, X. (2021). Multiple prosodic meanings are conveyed through separate pitch ranges: Evidence from perception of focus and surprise in Mandarin Chinese. <em>Cognitive, Affective, & Behavioral Neuroscience</em>, 1-12. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia.pdf">Yang, F., Zhu, H., Yu, L., Lu, W., Zhang, C., & Tian, X. (2021). Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia. <em>Behavioural Brain Research</em>, 113411. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Manual Gestures Modulate Early Neural Responses in Loudness Perception.pdf">Sun, J., Wang, Z., & Tian, X. (2021). Manual Gestures Modulate Early Neural Responses in Loudness Perception. <em>Frontiers in neuroscience</em>, 1106. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Neural substrates of Chinese lexical production.pdf">Tao, L., Zhu, M., & Cai, Q. (2020). Neural substrates of Chinese lexical production: The role of domain-general cognitive functions. <em>Neuropsychologia</em>, 138, 107354. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Functional Status of Hypothalamic–Pituitary–Thyroid and Hypothalamic–Pituitary–Adrenal Axes in Hospitalized Schizophrenics in Shanghai.pdf">Zhu, Y., Ji, H., Tao, L., Cai, Q., Wang, F., Ji, W., ... & Fang, Y. (2020). Functional Status of Hypothalamic–Pituitary–Thyroid and Hypothalamic–Pituitary–Adrenal Axes in Hospitalized Schizophrenics in Shanghai. <em>Frontiers in Psychiatry</em>, 11. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Corollary discharge versus efference copy.pdf">Li, S., Zhu, H., & Tian, X. (2020). Corollary discharge versus efference copy: Distinct neural signals in speech preparation differentially modulate auditory responses. <em>Cerebral Cortex</em>, bhaa154. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Multi-scale predictions distinctively modulate tone perception in schizophrenia patients with auditory verbal hallucinations.pdf">Yang, F., Zhu, H., Yu, L., Lu, W., Zhang, C., & Tian, X. (2020) Multi-scale predictions distinctively modulate tone perception in schizophrenia patients with auditory verbal hallucinations. <em>bioRxiv</em>, 204495. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/The dynamic and task dependent representational transformation between the motor and sensory systems during speech production.pdf">Zhang, W., Liu, Y., Wang, X., & Tian, X. (2020). The Dynamic and Task-dependent Representational Transformation Between the Motor and Sensory Systems during Speech Production. <em>Cognitive Neuroscience</em>. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Constraint structure of ancient Chinese poetry facilitates speech content grouping.pdf"> Teng, X., Ma, M., Yang, J., Blohm, S., Cai, Q., & Tian, X. (2020) Constraint structure of ancient Chinese poetry facilitates speech content grouping. <em>Current Biology</em>, 30(7), 1299-1305. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Mental operations in rhythm.pdf"> Li, Y., Luo, H., & Tian, X. (2020). Mental operations in rhythm: Motor-to-sensory transformation mediates imagined singing. <em>PLoS biology</em>, 18(10), e3000504. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Effects and potential mechanisms of transcranial direct current stimulation (tDCS) on auditory hallucinations.pdf">Yang, F., Fang, X., Tang, W., Hui, L., Chen, Y., Zhang, C., & Tian, X. (2019). Effects and potential mechanisms of transcranial direct current stimulation (tDCS) on auditory hallucinations: A meta-analysis. <em>Psychiatry research</em>, 273, 343. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Revealing the Temporal Dynamics in Noninvasive Electrophysiological recordings with Topography-based Analyses.pdf"> Wang, X., Zhu, H., & Tian, X. (2019). Revealing the Temporal Dynamics in Non-invasive Electrophysiological recordings with Topography-based Analyses. <em>bioRxiv</em>, 779546. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Distinct Mechanisms of Imagery Differentially Influence Speech Perception.pdf"> Ma, O., & Tian, X. (2019). Distinct mechanisms of imagery differentially influence speech perception. <em>eNeuro</em>, 6(5). (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Theta band oscillations reflect more than entrainment behavioral and neural evidence demonstrates an active chunking process.pdf">Teng, X., Tian, X., Doelling, K., & Poeppel, D. (2018). Theta band oscillations reflect more than entrainment: behavioral and neural evidence demonstrates an active chunking process. <em>European Journal of Neuroscience</em>, 48(8), 2770-2782. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Group-Level Multivariate Analysis in EasyEEG Toolbox.pdf">Yang, J., Zhu, H., & Tian, X. (2018). Group-Level Multivariate Analysis in EasyEEG Toolbox: Examining the Temporal Dynamics Using Topographic Responses. <em>Frontiers in neuroscience</em>, 12. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Tian_etal_2018_Nat_Hum_Beh.pdf">Tian, X., Ding, N., Teng, X., Bai, F., & Poeppel, D. (2018). Imagined speech influences perceived loudness of sound. <em>Nature Human Behaviour</em>, 2(3), 225. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Concurrent temporal channels for auditory processing.pdf">Teng, X., Tian, X., Rowland, J.,&amp;Poeppel, D. (2017). Concurrent temporal channels for auditory processing: Oscillatory neural entrainment reveals segregation of function at different scales. <em> PLoS biology</em>, 15(11), e2000812.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Testing multi-scale processing in the auditory system.pdf">Teng, X., Tian, X., &amp; Poeppel, D.(2016). Testing multi-scale processing in the auditory system. <em>Scientific Reports</em>, 6, 34390. doi:10.1038/srep34390(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Mental imagery of speech implicates two mechanisms of perceptual reactivation.pdf">Tian, X., Zarate, J.M., Poeppel, D.(2016). Mental imagery of speech implicates two mechanisms of perceptual reactivation. <em>Cortex</em>. 77, 1-12. doi: 10.1016/j.cortex.2016.01.002(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Cortical tracking of hierarchical linguistic structure in connected speech.pdf">Ding, N., Melloni, L., Zhang, H., Tian,X., Poeppel, D. (2016). Cortical tracking of hierarchical linguistic structure in connected speech. <em>Nature Neuroscience</em>.19(1), 158-164.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Haegen_etal_2016.pdf">Van der Haegen, L., Acke, F., Vingerhoets, G., Dhooge, I., De Leenheer, E., Cai, Q.*, Brysbaert, M. Laterality and unilateral deafness: Patients with congenital right ear deafness do not develop atypical language dominance.<em> Neuropsychologia.</em>(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Dynamics of self-monitoring and error detection in speech production.pdf">Tian, X., &amp; Poeppel, D. (2015). Dynamics of self-monitoring and error detection in speech production: evidence from mental imagery MEG.  <em>Journal of Cognitive Neuroscience.</em> 27(2), 352-364.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Multiple levels of linguistic and paralinguistic features contribute to voice recognition.pdf">Zarate, J.M.<em>, Tian, X.</em>, Woods, K.J.P.,&amp; Poeppel, D. (2015). Multiple levels of linguistic and paralinguistic features contribute to voice recognition. <em>Scientific Reports</em>. 5: 11475. doi: 10.1038/srep11475 (*equal contribution)(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/The effect of imagination on stimulation.pdf">Tian, X., &amp; Poeppel, D. (2013). The effect of imagination on stimulation: the functional specificity of efference copies in speech processing.  <em>Journal of Cognitive Neuroscience.</em> 25(7), 1020-1036.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Change detection through connectivity reduction.pdf">Tian, X., &amp; Huber, D.E. (2013). Playing ‘Duck Duck Goose’ with neurons: Change detection through connectivity reduction. <em>Psychological Science</em>.24(6), 819–827.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Mental imagery of speech linking motor and sensory systems through internals imulation.pdf">Tian, X., &amp; Poeppel, D. (2012). Mental imagery of speech: linking motor and sensory systems through internals imulation. <em>Front. Hum. Neurosci.</em> 6:314. doi: 10.3389/fnhum.2012.00314(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/TopoToolbox.pdf">Tian, X., Poeppel, D., &amp; Huber, D.E. (2011). TopoToolbox: Using sensor topography to calculate psychologically meaningful measures from event-related EEG/MEG. <em>Computational Intelligence and Neuroscience</em>. 2011,doi:10.1155/2011/674605(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Mental imagery of speech andmovement implicates the dynamics of internal forward models.pdf">Tian, X., &amp; Poeppel, D. (2010). Mental imagery of speech andmovement implicates the dynamics of internal forward models. <em>Front. Psychology,</em> 1:166. doi: 10.3389/fpsyg.2010.00166(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Measures of spatial similarity and response magnitude in MEG andscalp EEG.pdf">Tian, X., &amp; Huber,D.E. (2008). Measures of spatial similarity and response magnitude in MEG andscalp EEG. <em>Brain Topography</em>, <em>20</em>,131-141.(PDF)</a></p></blockquote>
-								</div>
+					<h3>Learning and Memory (speech and language related)</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Manual directional gestures facilitate cross-modal perceptual learning.pdf">Zhen, A., Van Hedger, S., Heald, S., Goldin-Meadow, S., & Tian, X. (2019). Manual directional gestures facilitate cross-modal perceptual learning. <em>Cognition</em>, 187, 178-187.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The functional relations among motor-based prediction, sensory goals and feedback in learning non-native speech sounds- Evidence from adult Mandarin Chinese speakers with an auditory feedback masking paradigm.pdf">Liu, X., & Tian, X. (2018). The functional relations among motor-based prediction, sensory goals and feedback in learning non-native speech sounds: Evidence from adult Mandarin Chinese speakers with an auditory feedback masking paradigm. <em>Scientific reports</em>, 8(1), 11910. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Neural response phase tracks how listeners learn new acoustic representations.pdf">Luo<em>, H., Tian</em>, X., Song, K., Zhou, K., &amp; Poeppel, D. (2013). Neural response phase tracks how listeners learn new acoustic representations. <em>Current Biology</em>. 23(11), 968–974.(*equal contribution)(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/A habituation account of change detection different judgments.pdf">Davelaar, E.J., Tian, X., Weidemann, C.T., &amp; Huber, D.E. (2011). A habituation account of change detection in same/different judgments. <em>Cognitive,Affective and Behavioral Neuroscience</em>, 11,608-626.(PDF)</a></p></blockquote>
+		        </li>
 
-								<h3>Visual Word Perception and Language Acquisition</h3>
-								<br>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Effects of cumulative language exposure.pdf">Tao, L., Cai, Q., & Gollan, T. H. (2021). Effects of cumulative language exposure on heritage and majority language skills: Spanish and Mandarin heritage speakers in the USA. <em>Linguistic Approaches to Bilingualism</em>, 11(2), 168-191. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/How Do We Segment Text.pdf"> Yang, J., Cai, Q., & Tian, X. (2020). How do we segment text? Two-stage chunking operation in reading. <em>eNeuro</em>, 7(3), 0425-19.2020. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/NewPerspectivesontheAgingLexicon.pdf">Wulff, D. U., De Deyne, S., Jones, M. N., Mata, R., & Aging Lexicon Consortium. (2019). New perspectives on the aging lexicon. <em>Trends in cognitive sciences</em>, 23(8), 686-698. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Effects of cumulative language exposure on heritage and majority language skills.pdf"> Tao, L., Cai, Q., & Gollan, T. H. (2019). Effects of cumulative language exposure on heritage and majority language skills: Spanish and Mandarin heritage speakers in the USA. <em>Linguistic Approaches to Bilingualism</em>. (PDF)</a></p></blockquote>	
-								<blockquote><p class="to_left"><a href="papers/Interhemispheric communication influences reading behavior.pdf">Van der Haegen, L., Cai, Q., Stevens, M.A., and Brysbaert, M. (2013). Interhemispheric communication influences reading behavior.<em> Journal of Cognitive Neuroscience</em>25(9): 1442-1452.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/The effects of visual imagery on face identification.pdf">Wu, J., Duan, H., Tian, X., Wang, P.,&amp; Zhang, K. (2012). The effects of visual imagery on face identification: an ERP study. <em>Front. Hum. Neurosci.</em> 6:305. doi: 10.3389/fnhum.2012.00305(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/SUBTLEXCH Chinese word and character frequencies based on film subtitles.pdf">Cai, Q.*, and Brysbaert, M. *(2010). *SUBTLEX-CH: Chinese word and character frequencies based on film subtitles. PLoS One 5(6): e10729.(PDF) (Chinese word frequencies.</a> Online search: <a href='http://crr.ugent.be/isubtlex_ch/' target='_blank' >http://crr.ugent.be/isubtlex_ch/</a>)</p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Testing an associative account of semantic satiation.pdf">Tian, X., &amp; Huber, D.E. (2010). Testing an associative account of semantic satiation. <em>Cognitive Psychology,60</em>, 267-290.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Early involvement of dorsal and ventral pathways in visual word recognition.pdf">Rosazza, C., Cai, Q., Minati, L., Paulignan, Y., and Nazir, T.A. (2009). Early involvement of dorsal and ventral pathways in visual word recognition: An ERP study. <em>Brain Res</em> 1272: 32-44.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/The Dynamics of Integration and Separation.pdf">Huber, D. E., Tian, X., Curran, T., O’Reilly, C, &amp; Woroch, B. (2008). The dynamics of integration and separation: ERP, MEG, and neural network studies of immediate repetition effects. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, 34,1389-1416.(PDF)</a></p></blockquote>
-								</div>
+		        <li class="scrollable">
+		        	<h2>发表文章</h2>
 
-								<h3>Language Comprehension and Lateralization</h3>
-								<br>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Bilingualism and domain-general cognitive.pdf">Tao, L., Wang, G., Zhu, M., & Cai, Q. (2021). Bilingualism and domain-general cognitive functions from a neural perspective: A systematic review. <em>Neuroscience & Biobehavioral Reviews</em>. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/A Cross-linguistic Study into the Contribution.pdf">De Deyne, S., Cabana, Á., Li, B., Cai, Q., & McKague, M. (2020). A Cross-linguistic Study into the Contribution of Affective Connotation in the Lexico-semantic Representation of Concrete and Abstract Concepts. <em>CogSci</em>. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Lateralization in the dichotic listening of tones is influenced by the content of speech.pdf"> Mei, N., Flinker, A., Zhu, M., Cai, Q., & Tian, X. (2020). Lateralization in the dichotic listening of tones is influenced by the content of speech. <em>Neuropsychologia</em>, 140, 107389. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Lateralization of Language.pdf">Van der Haegen, L., & Cai, Q. (2019). Lateralization of language. In <em>The Oxford Handbook of Neurolinguistics</em>. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Brain Functional Organization Associated With Language Lateralization.pdf">Wang, S., Van der Haegen, L., Tao, L., & Cai, Q. (2019). Brain Functional Organization Associated With Language Lateralization. <em>Cerebral Cortex</em>. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Effects of early home language environment II.pdf">Tao, L., & Cai, Q. (2018). Effects of early home language environment II: Speech comprehension and cognitive functions. <em>Bilingualism: Language and Cognition</em>, 21(3), 537-549. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Rule based and word level statistics based processing of language.pdf">Ding, N., Melloni, L., Tian, X., &amp;Poeppel, D. (2016). Rule-based and word-level statistics-based processing of language: insights from neuroscience. <em>Language,Cognition and Neuroscience</em>, 1-6. doi: 10.1080/23273798.2016.1215477(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/A new human-specific brain landmark- The depth asymmetry of superior temporal sulcus.pdf">Leroy, F., Cai,  Q., Bogart, S., Dubois, J., Coulon, O., Monzalvo, K., Fischer, C., Glasel, H., Van der Haegen, L., Benezit, A., Lin, C.P., Kennedy, D., Ihara, A.S., Hertz-Pannier, L., Moutard, M.L., Poupon, C., Brysbaert, M., Roberts, N., Hopkins, W., Mangin, J.F., Dehaene-Lambertz, G. (2015) A new human-specific brain landmark: The depth asymmetry of superior temporal sulcus. <em>Proc Natl Acad Sci </em>112(4): 1208-1213.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/What can atypical language hemisphericspecialization tell us about cognitive functions.pdf">Cai, Q.*, and Van der Haegen, L. (2015). What can atypical language hemisphericspecialization tell us about cognitive functions? <em>Neurosci Bull</em> 31(2): 220-226.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/A surface-based analysis of language lateralization and cortical asymmetry.pdf">Greve, D.N., Van der Haegen, L., Cai, Q., Stufflebeam, S., Sabuncu, M.R., Fischl, B., and Brysbaert, M. (2013) A surface-based analysis of language lateralization and cortical asymmetry. <em>Journal of Cognitive Neuroscience</em>25(9): 1477-1492.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Complementary hemispheric specialization for language production and visuospatial attention.pdf">Cai, Q.*, Van der Haegen , L., and Brysbaert, M. (2013). Complementary hemispheric specialization for language production and visuospatial attention. <em>Proc Natl Acad Sci </em>110(4): E322-330.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Praxis and language are linked.pdf">Vingerhoets, G., Alderweireldt, A.S., Vandemaele, P., Cai, Q., Van der Haegen, L., Brysbaert, M., and Achten, E. (2013). Praxis and language are linked: Evidence from co-lateralization in individuals with atypical language dominance. <em>Cortex </em>49(1): 172-183.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Brain asymmetry and visual word recognition.pdf">Brysbaert, M., Cai, Q., and Van der Haegen, L. (2012). Brain asymmetry and visual word recognition: Do we have a split fovea? In J. Adelman (Ed.): <em>Visual Word Recognition</em>, Volume 1: Models and Methods, Orthography and Phonology. Hove, UK: Psychology Press.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Colateralization of Brocas area and the visual word form area in left handers.pdf">Van der Haegen , L., Cai, Q., and Brysbaert, M. (2012). Colateralization of Broca’s area and the visual word form area in left-handers: fMRI evidence. <em>Brain Lang</em> 122(3): 171-178.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Further fMRI validation of the visual half field technique as an indicator of language laterality.pdf">Van der Haegen, L., Cai, Q., Seurinck, R., and Brysbaert, M. (2011). Further fMRI validation of the visual half field technique as an indicator of language laterality: A large-group analysis. <em>Neuropsychologia </em>49: 2879-2888.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/The left ventral occipitotemporal response to words depends on language lateralization but not on visual familiarity.pdf">Cai, Q.*, Paulignan, Y., Brysbaert, M., Ibarrola, D., &amp; Nazir, T.A. (2010). The left ventral occipito-temporal response to words depends on language lateralization but not on visual familiarity. <em>Cereb Cortex</em> 20: 1153–1163.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Cerebral lateralization of frontal lobe language processes and lateralization of the posterior visual word processing system.pdf">Cai, Q.*, Lavidor, M., Brysbaert, M., Paulignan, Y., and Nazir, T. A. (2008). Cerebral lateralization of frontal lobe language processes and lateralization of the posterior visual word processing system. <em>J Cogn Neurosci</em> 20: 672-681.(PDF)</a></p></blockquote>
-								</div>
+					<h4 style="text-align:left;">
+					    &LongLeftArrow;	 Topic Order
+					    <span style="float:right;">
+					        Chronological Order &LongRightArrow;
+					    </span>
+					</h4>
 
-								<h3>Learning and Memory (speech and language related)</h3>
-								<br>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Manual directional gestures facilitate cross-modal perceptual learning.pdf">Zhen, A., Van Hedger, S., Heald, S., Goldin-Meadow, S., & Tian, X. (2019). Manual directional gestures facilitate cross-modal perceptual learning. <em>Cognition</em>, 187, 178-187.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/The functional relations among motor-based prediction, sensory goals and feedback in learning non-native speech sounds- Evidence from adult Mandarin Chinese speakers with an auditory feedback masking paradigm.pdf">Liu, X., & Tian, X. (2018). The functional relations among motor-based prediction, sensory goals and feedback in learning non-native speech sounds: Evidence from adult Mandarin Chinese speakers with an auditory feedback masking paradigm. <em>Scientific reports</em>, 8(1), 11910. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Neural response phase tracks how listeners learn new acoustic representations.pdf">Luo<em>, H., Tian</em>, X., Song, K., Zhou, K., &amp; Poeppel, D. (2013). Neural response phase tracks how listeners learn new acoustic representations. <em>Current Biology</em>. 23(11), 968–974.(*equal contribution)(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/A habituation account of change detection different judgments.pdf">Davelaar, E.J., Tian, X., Weidemann, C.T., &amp; Huber, D.E. (2011). A habituation account of change detection in same/different judgments. <em>Cognitive,Affective and Behavioral Neuroscience</em>, 11,608-626.(PDF)</a></p></blockquote>
-								</div>
+					<h3>2021</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Effects of cumulative language exposure.pdf">Tao, L., Cai, Q., & Gollan, T. H. (2021). Effects of cumulative language exposure on heritage and majority language skills: Spanish and Mandarin heritage speakers in the USA. <em>Linguistic Approaches to Bilingualism</em>, 11(2), 168-191. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Bilingualism and domain-general cognitive.pdf">Tao, L., Wang, G., Zhu, M., & Cai, Q. (2021). Bilingualism and domain-general cognitive functions from a neural perspective: A systematic review. <em>Neuroscience & Biobehavioral Reviews</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Yu2021_Article_AlteredBrainActivityInTheBilat.pdf">Yu, L., Guo, L., Fang, X., Yang, F., Chen, Y., Wang, Y., ... & Zhang, C. (2021). Altered brain activity in the bilateral frontal cortices and neural correlation with cognitive impairment in schizophrenia. <em>Brain imaging and behavior</em>, 1-9. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Liu2021_Article_MultipleProsodicMeaningsAreCon.pdf">Liu, X., Xu, Y., Zhang, W., & Tian, X. (2021). Multiple prosodic meanings are conveyed through separate pitch ranges: Evidence from perception of focus and surprise in Mandarin Chinese. <em>Cognitive, Affective, & Behavioral Neuroscience</em>, 1-12. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia.pdf">Yang, F., Zhu, H., Yu, L., Lu, W., Zhang, C., & Tian, X. (2021). Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia. <em>Behavioural Brain Research</em>, 113411. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Manual Gestures Modulate Early Neural Responses in Loudness Perception.pdf">Sun, J., Wang, Z., & Tian, X. (2021). Manual Gestures Modulate Early Neural Responses in Loudness Perception. <em>Frontiers in neuroscience</em>, 1106. (PDF)</a></p></blockquote>
 
-								<div style="height: 230px;">&nbsp;
-								</div>
+					<h3>2020</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/A Cross-linguistic Study into the Contribution.pdf">De Deyne, S., Cabana, Á., Li, B., Cai, Q., & McKague, M. (2020). A Cross-linguistic Study into the Contribution of Affective Connotation in the Lexico-semantic Representation of Concrete and Abstract Concepts. <em>CogSci</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Neural substrates of Chinese lexical production.pdf">Tao, L., Zhu, M., & Cai, Q. (2020). Neural substrates of Chinese lexical production: The role of domain-general cognitive functions. <em>Neuropsychologia</em>, 138, 107354. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Functional Status of Hypothalamic–Pituitary–Thyroid and Hypothalamic–Pituitary–Adrenal Axes in Hospitalized Schizophrenics in Shanghai.pdf">Zhu, Y., Ji, H., Tao, L., Cai, Q., Wang, F., Ji, W., ... & Fang, Y. (2020). Functional Status of Hypothalamic–Pituitary–Thyroid and Hypothalamic–Pituitary–Adrenal Axes in Hospitalized Schizophrenics in Shanghai. <em>Frontiers in Psychiatry</em>, 11. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Corollary discharge versus efference copy.pdf">Li, S., Zhu, H., & Tian, X. (2020). Corollary discharge versus efference copy: Distinct neural signals in speech preparation differentially modulate auditory responses. <em>Cerebral Cortex</em>, bhaa154. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Multi-scale predictions distinctively modulate tone perception in schizophrenia patients with auditory verbal hallucinations.pdf">Yang, F., Zhu, H., Yu, L., Lu, W., Zhang, C., & Tian, X. (2020) Multi-scale predictions distinctively modulate tone perception in schizophrenia patients with auditory verbal hallucinations. <em>bioRxiv</em>, 204495. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The dynamic and task dependent representational transformation between the motor and sensory systems during speech production.pdf">Zhang, W., Liu, Y., Wang, X., & Tian, X. (2020). The Dynamic and Task-dependent Representational Transformation Between the Motor and Sensory Systems during Speech Production. <em>Cognitive Neuroscience</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/How Do We Segment Text.pdf"> Yang, J., Cai, Q., & Tian, X. (2020). How do we segment text? Two-stage chunking operation in reading. <em>eNeuro</em>, 7(3), 0425-19.2020. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Constraint structure of ancient Chinese poetry facilitates speech content grouping.pdf"> Teng, X., Ma, M., Yang, J., Blohm, S., Cai, Q., & Tian, X. (2020) Constraint structure of ancient Chinese poetry facilitates speech content grouping. <em>Current Biology</em>, 30(7), 1299-1305. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Lateralization in the dichotic listening of tones is influenced by the content of speech.pdf"> Mei, N., Flinker, A., Zhu, M., Cai, Q., & Tian, X. (2020). Lateralization in the dichotic listening of tones is influenced by the content of speech. <em>Neuropsychologia</em>, 140, 107389. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Mental operations in rhythm.pdf"> Li, Y., Luo, H., & Tian, X. (2020). Mental operations in rhythm: Motor-to-sensory transformation mediates imagined singing. <em>PLoS biology</em>, 18(10), e3000504. (PDF)</a></p></blockquote>
 
-								
-							</div>
-						</div>	
-					</div>
-				</div>
+					<h3>2019</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Lateralization of Language.pdf">Van der Haegen, L., & Cai, Q. (2019). Lateralization of language. In <em>The Oxford Handbook of Neurolinguistics</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/NewPerspectivesontheAgingLexicon.pdf">Wulff, D. U., De Deyne, S., Jones, M. N., Mata, R., & Aging Lexicon Consortium. (2019). New perspectives on the aging lexicon. <em>Trends in cognitive sciences</em>, 23(8), 686-698. (PDF)</a></p></blockquote>	
+					<blockquote><p class="to_left"><a href="papers/Effects of cumulative language exposure on heritage and majority language skills.pdf"> Tao, L., Cai, Q., & Gollan, T. H. (2019). Effects of cumulative language exposure on heritage and majority language skills: Spanish and Mandarin heritage speakers in the USA. <em>Linguistic Approaches to Bilingualism</em>. (PDF)</a></p></blockquote>	
+					<blockquote><p class="to_left"><a href="papers/Brain Functional Organization Associated With Language Lateralization.pdf">Wang, S., Van der Haegen, L., Tao, L., & Cai, Q. (2019). Brain Functional Organization Associated With Language Lateralization. <em>Cerebral Cortex</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Effects and potential mechanisms of transcranial direct current stimulation (tDCS) on auditory hallucinations.pdf">Yang, F., Fang, X., Tang, W., Hui, L., Chen, Y., Zhang, C., & Tian, X. (2019). Effects and potential mechanisms of transcranial direct current stimulation (tDCS) on auditory hallucinations: A meta-analysis. <em>Psychiatry research</em>, 273, 343. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Manual directional gestures facilitate cross-modal perceptual learning.pdf">Zhen, A., Van Hedger, S., Heald, S., Goldin-Meadow, S., & Tian, X. (2019). Manual directional gestures facilitate cross-modal perceptual learning. <em>Cognition</em>, 187, 178-187.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Revealing the Temporal Dynamics in Noninvasive Electrophysiological recordings with Topography-based Analyses.pdf"> Wang, X., Zhu, H., & Tian, X. (2019). Revealing the Temporal Dynamics in Non-invasive Electrophysiological recordings with Topography-based Analyses. <em>bioRxiv</em>, 779546. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Distinct Mechanisms of Imagery Differentially Influence Speech Perception.pdf"> Ma, O., & Tian, X. (2019). Distinct mechanisms of imagery differentially influence speech perception. <em>eNeuro</em>, 6(5). (PDF)</a></p></blockquote>
+
+					<h3>2018</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Effects of early home language environment II.pdf">Tao, L., & Cai, Q. (2018). Effects of early home language environment II: Speech comprehension and cognitive functions. <em>Bilingualism: Language and Cognition</em>, 21(3), 537-549. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Theta band oscillations reflect more than entrainment behavioral and neural evidence demonstrates an active chunking process.pdf">Teng, X., Tian, X., Doelling, K., & Poeppel, D. (2018). Theta band oscillations reflect more than entrainment: behavioral and neural evidence demonstrates an active chunking process. <em>European Journal of Neuroscience</em>, 48(8), 2770-2782. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The functional relations among motor-based prediction, sensory goals and feedback in learning non-native speech sounds- Evidence from adult Mandarin Chinese speakers with an auditory feedback masking paradigm.pdf">Liu, X., & Tian, X. (2018). The functional relations among motor-based prediction, sensory goals and feedback in learning non-native speech sounds: Evidence from adult Mandarin Chinese speakers with an auditory feedback masking paradigm. <em>Scientific reports</em>, 8(1), 11910. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Group-Level Multivariate Analysis in EasyEEG Toolbox.pdf">Yang, J., Zhu, H., & Tian, X. (2018). Group-Level Multivariate Analysis in EasyEEG Toolbox: Examining the Temporal Dynamics Using Topographic Responses. <em>Frontiers in neuroscience</em>, 12. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Tian_etal_2018_Nat_Hum_Beh.pdf">Tian, X., Ding, N., Teng, X., Bai, F., & Poeppel, D. (2018). Imagined speech influences perceived loudness of sound. <em>Nature Human Behaviour</em>, 2(3), 225. (PDF)</a></p></blockquote>
+
+					<h3>2017</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Concurrent temporal channels for auditory processing.pdf">Teng, X., Tian, X., Rowland, J.,&amp;Poeppel, D. (2017). Concurrent temporal channels for auditory processing: Oscillatory neural entrainment reveals segregation of function at different scales. <em> PLoS biology</em>, 15(11), e2000812.(PDF)</a></p></blockquote>
+
+					<h3>2016</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Testing multi-scale processing in the auditory system.pdf">Teng, X., Tian, X., &amp; Poeppel, D.(2016). Testing multi-scale processing in the auditory system. <em>Scientific Reports</em>, 6, 34390. doi:10.1038/srep34390(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Rule based and word level statistics based processing of language.pdf">Ding, N., Melloni, L., Tian, X., &amp;Poeppel, D. (2016). Rule-based and word-level statistics-based processing of language: insights from neuroscience. <em>Language,Cognition and Neuroscience</em>, 1-6. doi: 10.1080/23273798.2016.1215477(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Mental imagery of speech implicates two mechanisms of perceptual reactivation.pdf">Tian, X., Zarate, J.M., Poeppel, D.(2016). Mental imagery of speech implicates two mechanisms of perceptual reactivation. <em>Cortex</em>. 77, 1-12. doi: 10.1016/j.cortex.2016.01.002(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Cortical tracking of hierarchical linguistic structure in connected speech.pdf">Ding, N., Melloni, L., Zhang, H., Tian,X., Poeppel, D. (2016). Cortical tracking of hierarchical linguistic structure in connected speech. <em>Nature Neuroscience</em>.19(1), 158-164.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Haegen_etal_2016.pdf">Van der Haegen, L., Acke, F., Vingerhoets, G., Dhooge, I., De Leenheer, E., Cai, Q.*, Brysbaert, M. Laterality and unilateral deafness: Patients with congenital right ear deafness do not develop atypical language dominance.<em> Neuropsychologia.</em>(PDF)</a></p></blockquote>
+
+					<h3>2015</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Dynamics of self-monitoring and error detection in speech production.pdf">Tian, X., &amp; Poeppel, D. (2015). Dynamics of self-monitoring and error detection in speech production: evidence from mental imagery MEG.  <em>Journal of Cognitive Neuroscience.</em> 27(2), 352-364.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/A new human-specific brain landmark- The depth asymmetry of superior temporal sulcus.pdf">Leroy, F., Cai,  Q., Bogart, S., Dubois, J., Coulon, O., Monzalvo, K., Fischer, C., Glasel, H., Van der Haegen, L., Benezit, A., Lin, C.P., Kennedy, D., Ihara, A.S., Hertz-Pannier, L., Moutard, M.L., Poupon, C., Brysbaert, M., Roberts, N., Hopkins, W., Mangin, J.F., Dehaene-Lambertz, G. (2015) A new human-specific brain landmark: The depth asymmetry of superior temporal sulcus. <em>Proc Natl Acad Sci </em>112(4): 1208-1213.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/What can atypical language hemisphericspecialization tell us about cognitive functions.pdf">Cai, Q.*, and Van der Haegen, L. (2015). What can atypical language hemisphericspecialization tell us about cognitive functions? <em>Neurosci Bull</em> 31(2): 220-226.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Multiple levels of linguistic and paralinguistic features contribute to voice recognition.pdf">Zarate, J.M.<em>, Tian, X.</em>, Woods, K.J.P.,&amp; Poeppel, D. (2015). Multiple levels of linguistic and paralinguistic features contribute to voice recognition. <em>Scientific Reports</em>. 5: 11475. doi: 10.1038/srep11475 (*equal contribution)(PDF)</a></p></blockquote>
+
+					<h3>2013</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Interhemispheric communication influences reading behavior.pdf">Van der Haegen, L., Cai, Q., Stevens, M.A., and Brysbaert, M. (2013). Interhemispheric communication influences reading behavior.<em> Journal of Cognitive Neuroscience</em>25(9): 1442-1452.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/A surface-based analysis of language lateralization and cortical asymmetry.pdf">Greve, D.N., Van der Haegen, L., Cai, Q., Stufflebeam, S., Sabuncu, M.R., Fischl, B., and Brysbaert, M. (2013) A surface-based analysis of language lateralization and cortical asymmetry. <em>Journal of Cognitive Neuroscience</em>25(9): 1477-1492.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Complementary hemispheric specialization for language production and visuospatial attention.pdf">Cai, Q.*, Van der Haegen , L., and Brysbaert, M. (2013). Complementary hemispheric specialization for language production and visuospatial attention. <em>Proc Natl Acad Sci </em>110(4): E322-330.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Praxis and language are linked.pdf">Vingerhoets, G., Alderweireldt, A.S., Vandemaele, P., Cai, Q., Van der Haegen, L., Brysbaert, M., and Achten, E. (2013). Praxis and language are linked: Evidence from co-lateralization in individuals with atypical language dominance. <em>Cortex </em>49(1): 172-183.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The effect of imagination on stimulation.pdf">Tian, X., &amp; Poeppel, D. (2013). The effect of imagination on stimulation: the functional specificity of efference copies in speech processing.  <em>Journal of Cognitive Neuroscience.</em> 25(7), 1020-1036.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Neural response phase tracks how listeners learn new acoustic representations.pdf">Luo<em>, H., Tian</em>, X., Song, K., Zhou, K., &amp; Poeppel, D. (2013). Neural response phase tracks how listeners learn new acoustic representations. <em>Current Biology</em>. 23(11), 968–974.(*equal contribution)(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Change detection through connectivity reduction.pdf">Tian, X., &amp; Huber, D.E. (2013). Playing ‘Duck Duck Goose’ with neurons: Change detection through connectivity reduction. <em>Psychological Science</em>.24(6), 819–827.(PDF)</a></p></blockquote>
+
+					<h3>2012</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Brain asymmetry and visual word recognition.pdf">Brysbaert, M., Cai, Q., and Van der Haegen, L. (2012). Brain asymmetry and visual word recognition: Do we have a split fovea? In J. Adelman (Ed.): <em>Visual Word Recognition</em>, Volume 1: Models and Methods, Orthography and Phonology. Hove, UK: Psychology Press.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Mental imagery of speech linking motor and sensory systems through internals imulation.pdf">Tian, X., &amp; Poeppel, D. (2012). Mental imagery of speech: linking motor and sensory systems through internals imulation. <em>Front. Hum. Neurosci.</em> 6:314. doi: 10.3389/fnhum.2012.00314(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Colateralization of Brocas area and the visual word form area in left handers.pdf">Van der Haegen , L., Cai, Q., and Brysbaert, M. (2012). Colateralization of Broca’s area and the visual word form area in left-handers: fMRI evidence. <em>Brain Lang</em> 122(3): 171-178.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The effects of visual imagery on face identification.pdf">Wu, J., Duan, H., Tian, X., Wang, P.,&amp; Zhang, K. (2012). The effects of visual imagery on face identification: an ERP study. <em>Front. Hum. Neurosci.</em> 6:305. doi: 10.3389/fnhum.2012.00305(PDF)</a></p></blockquote>
+
+					<h3>2011</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Further fMRI validation of the visual half field technique as an indicator of language laterality.pdf">Van der Haegen, L., Cai, Q., Seurinck, R., and Brysbaert, M. (2011). Further fMRI validation of the visual half field technique as an indicator of language laterality: A large-group analysis. <em>Neuropsychologia </em>49: 2879-2888.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/A habituation account of change detection different judgments.pdf">Davelaar, E.J., Tian, X., Weidemann, C.T., &amp; Huber, D.E. (2011). A habituation account of change detection insame/different judgments. <em>Cognitive,Affective and Behavioral Neuroscience</em>, 11,608-626.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/TopoToolbox.pdf">Tian, X., Poeppel, D., &amp; Huber, D.E. (2011). TopoToolbox: Using sensor topography to calculate psychologically meaningful measures from event-related EEG/MEG. <em>Computational Intelligence and Neuroscience</em>. 2011,doi:10.1155/2011/674605(PDF)</a></p></blockquote>
+
+					<h3>2010</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/SUBTLEXCH Chinese word and character frequencies based on film subtitles.pdf">Cai, Q.*, and Brysbaert, M. *(2010). *SUBTLEX-CH: Chinese word and character frequencies based on film subtitles. PLoS One 5(6): e10729.(PDF) (Chinese word frequencies.</a> Online search: <a href='http://crr.ugent.be/isubtlex_ch/' target='_blank' >http://crr.ugent.be/isubtlex_ch/</a>)</p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The left ventral occipitotemporal response to words depends on language lateralization but not on visual familiarity.pdf">Cai, Q.*, Paulignan, Y., Brysbaert, M., Ibarrola, D., &amp; Nazir, T.A. (2010). The left ventral occipito-temporal response to words depends on language lateralization but not on visual familiarity. <em>Cereb Cortex</em> 20: 1153–1163.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Mental imagery of speech andmovement implicates the dynamics of internal forward models.pdf">Tian, X., &amp; Poeppel, D. (2010). Mental imagery of speech andmovement implicates the dynamics of internal forward models. <em>Front. Psychology,</em> 1:166. doi: 10.3389/fpsyg.2010.00166(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Testing an associative account of semantic satiation.pdf">Tian, X., &amp; Huber, D.E. (2010). Testing an associative account of semantic satiation. <em>Cognitive Psychology,60</em>, 267-290.(PDF)</a></p></blockquote>
+
+					<h3>2009</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Early involvement of dorsal and ventral pathways in visual word recognition.pdf">Rosazza, C., Cai, Q., Minati, L., Paulignan, Y., and Nazir, T.A. (2009). Early involvement of dorsal and ventral pathways in visual word recognition: An ERP study. <em>Brain Res</em> 1272: 32-44.(PDF)</a></p></blockquote>
+
+					<h3>2008</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/Cerebral lateralization of frontal lobe language processes and lateralization of the posterior visual word processing system.pdf">Cai, Q.*, Lavidor, M., Brysbaert, M., Paulignan, Y., and Nazir, T. A. (2008). Cerebral lateralization of frontal lobe language processes and lateralization of the posterior visual word processing system. <em>J Cogn Neurosci</em> 20: 672-681.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Measures of spatial similarity and response magnitude in MEG andscalp EEG.pdf">Tian, X., &amp; Huber,D.E. (2008). Measures of spatial similarity and response magnitude in MEG andscalp EEG. <em>Brain Topography</em>, <em>20</em>,131-141.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The Dynamics of Integration and Separation.pdf">Huber, D. E., Tian, X., Curran, T., O’Reilly, C, &amp; Woroch, B. (2008). The dynamics of integration and separation: ERP, MEG, and neural network studies of immediate repetition effects. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, 34,1389-1416.(PDF)</a></p></blockquote>
+		    	</li>
+
+		    </ul>
+		    <div class="arrows">
+		        <label for="slides_1"></label>
+		        <label for="slides_2"></label>
+		        <label for="slides_1" class="goto-first"></label>
+		        <label for="slides_2" class="goto-last"></label>
 		    </div>
-
-		    <div class="slider__contents">
-		    	<div id="Publications" class="content-section-b" style="border-top: 0">
-					<div class="container">
-						<div class="col-md-6 col-md-offset-3 text-center wrap_title">
-							<h2>发表文章</h2>
-							<br>
-							<h4> &nbsp; &nbsp; &nbsp;&nbsp;Topic Order &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Chronological</h4>
-						</div>
-
-						<div class="row">
-							<div class="col-md-12 wrap_title">
-
-								<h3>2021</h3>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Effects of cumulative language exposure.pdf">Tao, L., Cai, Q., & Gollan, T. H. (2021). Effects of cumulative language exposure on heritage and majority language skills: Spanish and Mandarin heritage speakers in the USA. <em>Linguistic Approaches to Bilingualism</em>, 11(2), 168-191. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Bilingualism and domain-general cognitive.pdf">Tao, L., Wang, G., Zhu, M., & Cai, Q. (2021). Bilingualism and domain-general cognitive functions from a neural perspective: A systematic review. <em>Neuroscience & Biobehavioral Reviews</em>. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Yu2021_Article_AlteredBrainActivityInTheBilat.pdf">Yu, L., Guo, L., Fang, X., Yang, F., Chen, Y., Wang, Y., ... & Zhang, C. (2021). Altered brain activity in the bilateral frontal cortices and neural correlation with cognitive impairment in schizophrenia. <em>Brain imaging and behavior</em>, 1-9. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Liu2021_Article_MultipleProsodicMeaningsAreCon.pdf">Liu, X., Xu, Y., Zhang, W., & Tian, X. (2021). Multiple prosodic meanings are conveyed through separate pitch ranges: Evidence from perception of focus and surprise in Mandarin Chinese. <em>Cognitive, Affective, & Behavioral Neuroscience</em>, 1-12. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia.pdf">Yang, F., Zhu, H., Yu, L., Lu, W., Zhang, C., & Tian, X. (2021). Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia. <em>Behavioural Brain Research</em>, 113411. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Manual Gestures Modulate Early Neural Responses in Loudness Perception.pdf">Sun, J., Wang, Z., & Tian, X. (2021). Manual Gestures Modulate Early Neural Responses in Loudness Perception. <em>Frontiers in neuroscience</em>, 1106. (PDF)</a></p></blockquote>
-								</div>
-
-								<h3>2020</h3>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/A Cross-linguistic Study into the Contribution.pdf">De Deyne, S., Cabana, Á., Li, B., Cai, Q., & McKague, M. (2020). A Cross-linguistic Study into the Contribution of Affective Connotation in the Lexico-semantic Representation of Concrete and Abstract Concepts. <em>CogSci</em>. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Neural substrates of Chinese lexical production.pdf">Tao, L., Zhu, M., & Cai, Q. (2020). Neural substrates of Chinese lexical production: The role of domain-general cognitive functions. <em>Neuropsychologia</em>, 138, 107354. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Functional Status of Hypothalamic–Pituitary–Thyroid and Hypothalamic–Pituitary–Adrenal Axes in Hospitalized Schizophrenics in Shanghai.pdf">Zhu, Y., Ji, H., Tao, L., Cai, Q., Wang, F., Ji, W., ... & Fang, Y. (2020). Functional Status of Hypothalamic–Pituitary–Thyroid and Hypothalamic–Pituitary–Adrenal Axes in Hospitalized Schizophrenics in Shanghai. <em>Frontiers in Psychiatry</em>, 11. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Corollary discharge versus efference copy.pdf">Li, S., Zhu, H., & Tian, X. (2020). Corollary discharge versus efference copy: Distinct neural signals in speech preparation differentially modulate auditory responses. <em>Cerebral Cortex</em>, bhaa154. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Multi-scale predictions distinctively modulate tone perception in schizophrenia patients with auditory verbal hallucinations.pdf">Yang, F., Zhu, H., Yu, L., Lu, W., Zhang, C., & Tian, X. (2020) Multi-scale predictions distinctively modulate tone perception in schizophrenia patients with auditory verbal hallucinations. <em>bioRxiv</em>, 204495. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/The dynamic and task dependent representational transformation between the motor and sensory systems during speech production.pdf">Zhang, W., Liu, Y., Wang, X., & Tian, X. (2020). The Dynamic and Task-dependent Representational Transformation Between the Motor and Sensory Systems during Speech Production. <em>Cognitive Neuroscience</em>. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/How Do We Segment Text.pdf"> Yang, J., Cai, Q., & Tian, X. (2020). How do we segment text? Two-stage chunking operation in reading. <em>eNeuro</em>, 7(3), 0425-19.2020. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Constraint structure of ancient Chinese poetry facilitates speech content grouping.pdf"> Teng, X., Ma, M., Yang, J., Blohm, S., Cai, Q., & Tian, X. (2020) Constraint structure of ancient Chinese poetry facilitates speech content grouping. <em>Current Biology</em>, 30(7), 1299-1305. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Lateralization in the dichotic listening of tones is influenced by the content of speech.pdf"> Mei, N., Flinker, A., Zhu, M., Cai, Q., & Tian, X. (2020). Lateralization in the dichotic listening of tones is influenced by the content of speech. <em>Neuropsychologia</em>, 140, 107389. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Mental operations in rhythm.pdf"> Li, Y., Luo, H., & Tian, X. (2020). Mental operations in rhythm: Motor-to-sensory transformation mediates imagined singing. <em>PLoS biology</em>, 18(10), e3000504. (PDF)</a></p></blockquote>
-								</div>
-
-								<h3>2019</h3>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Lateralization of Language.pdf">Van der Haegen, L., & Cai, Q. (2019). Lateralization of language. In <em>The Oxford Handbook of Neurolinguistics</em>. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/NewPerspectivesontheAgingLexicon.pdf">Wulff, D. U., De Deyne, S., Jones, M. N., Mata, R., & Aging Lexicon Consortium. (2019). New perspectives on the aging lexicon. <em>Trends in cognitive sciences</em>, 23(8), 686-698. (PDF)</a></p></blockquote>	
-								<blockquote><p class="to_left"><a href="papers/Effects of cumulative language exposure on heritage and majority language skills.pdf"> Tao, L., Cai, Q., & Gollan, T. H. (2019). Effects of cumulative language exposure on heritage and majority language skills: Spanish and Mandarin heritage speakers in the USA. <em>Linguistic Approaches to Bilingualism</em>. (PDF)</a></p></blockquote>	
-								<blockquote><p class="to_left"><a href="papers/Brain Functional Organization Associated With Language Lateralization.pdf">Wang, S., Van der Haegen, L., Tao, L., & Cai, Q. (2019). Brain Functional Organization Associated With Language Lateralization. <em>Cerebral Cortex</em>. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Effects and potential mechanisms of transcranial direct current stimulation (tDCS) on auditory hallucinations.pdf">Yang, F., Fang, X., Tang, W., Hui, L., Chen, Y., Zhang, C., & Tian, X. (2019). Effects and potential mechanisms of transcranial direct current stimulation (tDCS) on auditory hallucinations: A meta-analysis. <em>Psychiatry research</em>, 273, 343. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Manual directional gestures facilitate cross-modal perceptual learning.pdf">Zhen, A., Van Hedger, S., Heald, S., Goldin-Meadow, S., & Tian, X. (2019). Manual directional gestures facilitate cross-modal perceptual learning. <em>Cognition</em>, 187, 178-187.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Revealing the Temporal Dynamics in Noninvasive Electrophysiological recordings with Topography-based Analyses.pdf"> Wang, X., Zhu, H., & Tian, X. (2019). Revealing the Temporal Dynamics in Non-invasive Electrophysiological recordings with Topography-based Analyses. <em>bioRxiv</em>, 779546. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Distinct Mechanisms of Imagery Differentially Influence Speech Perception.pdf"> Ma, O., & Tian, X. (2019). Distinct mechanisms of imagery differentially influence speech perception. <em>eNeuro</em>, 6(5). (PDF)</a></p></blockquote>
-								</div>
-
-								<h3>2018</h3>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Effects of early home language environment II.pdf">Tao, L., & Cai, Q. (2018). Effects of early home language environment II: Speech comprehension and cognitive functions. <em>Bilingualism: Language and Cognition</em>, 21(3), 537-549. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Theta band oscillations reflect more than entrainment behavioral and neural evidence demonstrates an active chunking process.pdf">Teng, X., Tian, X., Doelling, K., & Poeppel, D. (2018). Theta band oscillations reflect more than entrainment: behavioral and neural evidence demonstrates an active chunking process. <em>European Journal of Neuroscience</em>, 48(8), 2770-2782. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/The functional relations among motor-based prediction, sensory goals and feedback in learning non-native speech sounds- Evidence from adult Mandarin Chinese speakers with an auditory feedback masking paradigm.pdf">Liu, X., & Tian, X. (2018). The functional relations among motor-based prediction, sensory goals and feedback in learning non-native speech sounds: Evidence from adult Mandarin Chinese speakers with an auditory feedback masking paradigm. <em>Scientific reports</em>, 8(1), 11910. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Group-Level Multivariate Analysis in EasyEEG Toolbox.pdf">Yang, J., Zhu, H., & Tian, X. (2018). Group-Level Multivariate Analysis in EasyEEG Toolbox: Examining the Temporal Dynamics Using Topographic Responses. <em>Frontiers in neuroscience</em>, 12. (PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Tian_etal_2018_Nat_Hum_Beh.pdf">Tian, X., Ding, N., Teng, X., Bai, F., & Poeppel, D. (2018). Imagined speech influences perceived loudness of sound. <em>Nature Human Behaviour</em>, 2(3), 225. (PDF)</a></p></blockquote>
-								</div>
-
-								<h3>2017</h3>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Concurrent temporal channels for auditory processing.pdf">Teng, X., Tian, X., Rowland, J.,&amp;Poeppel, D. (2017). Concurrent temporal channels for auditory processing: Oscillatory neural entrainment reveals segregation of function at different scales. <em> PLoS biology</em>, 15(11), e2000812.(PDF)</a></p></blockquote>
-								</div>
-
-								<h3>2016</h3>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Testing multi-scale processing in the auditory system.pdf">Teng, X., Tian, X., &amp; Poeppel, D.(2016). Testing multi-scale processing in the auditory system. <em>Scientific Reports</em>, 6, 34390. doi:10.1038/srep34390(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Rule based and word level statistics based processing of language.pdf">Ding, N., Melloni, L., Tian, X., &amp;Poeppel, D. (2016). Rule-based and word-level statistics-based processing of language: insights from neuroscience. <em>Language,Cognition and Neuroscience</em>, 1-6. doi: 10.1080/23273798.2016.1215477(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Mental imagery of speech implicates two mechanisms of perceptual reactivation.pdf">Tian, X., Zarate, J.M., Poeppel, D.(2016). Mental imagery of speech implicates two mechanisms of perceptual reactivation. <em>Cortex</em>. 77, 1-12. doi: 10.1016/j.cortex.2016.01.002(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Cortical tracking of hierarchical linguistic structure in connected speech.pdf">Ding, N., Melloni, L., Zhang, H., Tian,X., Poeppel, D. (2016). Cortical tracking of hierarchical linguistic structure in connected speech. <em>Nature Neuroscience</em>.19(1), 158-164.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Haegen_etal_2016.pdf">Van der Haegen, L., Acke, F., Vingerhoets, G., Dhooge, I., De Leenheer, E., Cai, Q.*, Brysbaert, M. Laterality and unilateral deafness: Patients with congenital right ear deafness do not develop atypical language dominance.<em> Neuropsychologia.</em>(PDF)</a></p></blockquote>
-								</div>
-
-								<h3>2015</h3>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Dynamics of self-monitoring and error detection in speech production.pdf">Tian, X., &amp; Poeppel, D. (2015). Dynamics of self-monitoring and error detection in speech production: evidence from mental imagery MEG.  <em>Journal of Cognitive Neuroscience.</em> 27(2), 352-364.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/A new human-specific brain landmark- The depth asymmetry of superior temporal sulcus.pdf">Leroy, F., Cai,  Q., Bogart, S., Dubois, J., Coulon, O., Monzalvo, K., Fischer, C., Glasel, H., Van der Haegen, L., Benezit, A., Lin, C.P., Kennedy, D., Ihara, A.S., Hertz-Pannier, L., Moutard, M.L., Poupon, C., Brysbaert, M., Roberts, N., Hopkins, W., Mangin, J.F., Dehaene-Lambertz, G. (2015) A new human-specific brain landmark: The depth asymmetry of superior temporal sulcus. <em>Proc Natl Acad Sci </em>112(4): 1208-1213.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/What can atypical language hemisphericspecialization tell us about cognitive functions.pdf">Cai, Q.*, and Van der Haegen, L. (2015). What can atypical language hemisphericspecialization tell us about cognitive functions? <em>Neurosci Bull</em> 31(2): 220-226.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Multiple levels of linguistic and paralinguistic features contribute to voice recognition.pdf">Zarate, J.M.<em>, Tian, X.</em>, Woods, K.J.P.,&amp; Poeppel, D. (2015). Multiple levels of linguistic and paralinguistic features contribute to voice recognition. <em>Scientific Reports</em>. 5: 11475. doi: 10.1038/srep11475 (*equal contribution)(PDF)</a></p></blockquote>
-								</div>
-
-								<h3>2013</h3>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Interhemispheric communication influences reading behavior.pdf">Van der Haegen, L., Cai, Q., Stevens, M.A., and Brysbaert, M. (2013). Interhemispheric communication influences reading behavior.<em> Journal of Cognitive Neuroscience</em>25(9): 1442-1452.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/A surface-based analysis of language lateralization and cortical asymmetry.pdf">Greve, D.N., Van der Haegen, L., Cai, Q., Stufflebeam, S., Sabuncu, M.R., Fischl, B., and Brysbaert, M. (2013) A surface-based analysis of language lateralization and cortical asymmetry. <em>Journal of Cognitive Neuroscience</em>25(9): 1477-1492.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Complementary hemispheric specialization for language production and visuospatial attention.pdf">Cai, Q.*, Van der Haegen , L., and Brysbaert, M. (2013). Complementary hemispheric specialization for language production and visuospatial attention. <em>Proc Natl Acad Sci </em>110(4): E322-330.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Praxis and language are linked.pdf">Vingerhoets, G., Alderweireldt, A.S., Vandemaele, P., Cai, Q., Van der Haegen, L., Brysbaert, M., and Achten, E. (2013). Praxis and language are linked: Evidence from co-lateralization in individuals with atypical language dominance. <em>Cortex </em>49(1): 172-183.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/The effect of imagination on stimulation.pdf">Tian, X., &amp; Poeppel, D. (2013). The effect of imagination on stimulation: the functional specificity of efference copies in speech processing.  <em>Journal of Cognitive Neuroscience.</em> 25(7), 1020-1036.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Neural response phase tracks how listeners learn new acoustic representations.pdf">Luo<em>, H., Tian</em>, X., Song, K., Zhou, K., &amp; Poeppel, D. (2013). Neural response phase tracks how listeners learn new acoustic representations. <em>Current Biology</em>. 23(11), 968–974.(*equal contribution)(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Change detection through connectivity reduction.pdf">Tian, X., &amp; Huber, D.E. (2013). Playing ‘Duck Duck Goose’ with neurons: Change detection through connectivity reduction. <em>Psychological Science</em>.24(6), 819–827.(PDF)</a></p></blockquote>
-								</div>
-
-								<h3>2012</h3>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Brain asymmetry and visual word recognition.pdf">Brysbaert, M., Cai, Q., and Van der Haegen, L. (2012). Brain asymmetry and visual word recognition: Do we have a split fovea? In J. Adelman (Ed.): <em>Visual Word Recognition</em>, Volume 1: Models and Methods, Orthography and Phonology. Hove, UK: Psychology Press.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Mental imagery of speech linking motor and sensory systems through internals imulation.pdf">Tian, X., &amp; Poeppel, D. (2012). Mental imagery of speech: linking motor and sensory systems through internals imulation. <em>Front. Hum. Neurosci.</em> 6:314. doi: 10.3389/fnhum.2012.00314(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Colateralization of Brocas area and the visual word form area in left handers.pdf">Van der Haegen , L., Cai, Q., and Brysbaert, M. (2012). Colateralization of Broca’s area and the visual word form area in left-handers: fMRI evidence. <em>Brain Lang</em> 122(3): 171-178.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/The effects of visual imagery on face identification.pdf">Wu, J., Duan, H., Tian, X., Wang, P.,&amp; Zhang, K. (2012). The effects of visual imagery on face identification: an ERP study. <em>Front. Hum. Neurosci.</em> 6:305. doi: 10.3389/fnhum.2012.00305(PDF)</a></p></blockquote>
-								</div>
-
-								<h3>2011</h3>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Further fMRI validation of the visual half field technique as an indicator of language laterality.pdf">Van der Haegen, L., Cai, Q., Seurinck, R., and Brysbaert, M. (2011). Further fMRI validation of the visual half field technique as an indicator of language laterality: A large-group analysis. <em>Neuropsychologia </em>49: 2879-2888.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/A habituation account of change detection different judgments.pdf">Davelaar, E.J., Tian, X., Weidemann, C.T., &amp; Huber, D.E. (2011). A habituation account of change detection insame/different judgments. <em>Cognitive,Affective and Behavioral Neuroscience</em>, 11,608-626.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/TopoToolbox.pdf">Tian, X., Poeppel, D., &amp; Huber, D.E. (2011). TopoToolbox: Using sensor topography to calculate psychologically meaningful measures from event-related EEG/MEG. <em>Computational Intelligence and Neuroscience</em>. 2011,doi:10.1155/2011/674605(PDF)</a></p></blockquote>
-								</div>
-
-								<h3>2010</h3>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/SUBTLEXCH Chinese word and character frequencies based on film subtitles.pdf">Cai, Q.*, and Brysbaert, M. *(2010). *SUBTLEX-CH: Chinese word and character frequencies based on film subtitles. PLoS One 5(6): e10729.(PDF) (Chinese word frequencies.</a> Online search: <a href='http://crr.ugent.be/isubtlex_ch/' target='_blank' >http://crr.ugent.be/isubtlex_ch/</a>)</p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/The left ventral occipitotemporal response to words depends on language lateralization but not on visual familiarity.pdf">Cai, Q.*, Paulignan, Y., Brysbaert, M., Ibarrola, D., &amp; Nazir, T.A. (2010). The left ventral occipito-temporal response to words depends on language lateralization but not on visual familiarity. <em>Cereb Cortex</em> 20: 1153–1163.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Mental imagery of speech andmovement implicates the dynamics of internal forward models.pdf">Tian, X., &amp; Poeppel, D. (2010). Mental imagery of speech andmovement implicates the dynamics of internal forward models. <em>Front. Psychology,</em> 1:166. doi: 10.3389/fpsyg.2010.00166(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Testing an associative account of semantic satiation.pdf">Tian, X., &amp; Huber, D.E. (2010). Testing an associative account of semantic satiation. <em>Cognitive Psychology,60</em>, 267-290.(PDF)</a></p></blockquote>
-								</div>
-
-								<h3>2009</h3>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Early involvement of dorsal and ventral pathways in visual word recognition.pdf">Rosazza, C., Cai, Q., Minati, L., Paulignan, Y., and Nazir, T.A. (2009). Early involvement of dorsal and ventral pathways in visual word recognition: An ERP study. <em>Brain Res</em> 1272: 32-44.(PDF)</a></p></blockquote>
-								</div>
-
-								<h3>2008</h3>
-								<div class="list-group">
-								<blockquote><p class="to_left"><a href="papers/Cerebral lateralization of frontal lobe language processes and lateralization of the posterior visual word processing system.pdf">Cai, Q.*, Lavidor, M., Brysbaert, M., Paulignan, Y., and Nazir, T. A. (2008). Cerebral lateralization of frontal lobe language processes and lateralization of the posterior visual word processing system. <em>J Cogn Neurosci</em> 20: 672-681.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/Measures of spatial similarity and response magnitude in MEG andscalp EEG.pdf">Tian, X., &amp; Huber,D.E. (2008). Measures of spatial similarity and response magnitude in MEG andscalp EEG. <em>Brain Topography</em>, <em>20</em>,131-141.(PDF)</a></p></blockquote>
-								<blockquote><p class="to_left"><a href="papers/The Dynamics of Integration and Separation.pdf">Huber, D. E., Tian, X., Curran, T., O’Reilly, C, &amp; Woroch, B. (2008). The dynamics of integration and separation: ERP, MEG, and neural network studies of immediate repetition effects. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, 34,1389-1416.(PDF)</a></p></blockquote>
-								</div>
-							</div>
-						</div>	
-					</div>
-				</div>
-		    	
+		    <div class="navigation">
+			    <div>
+		        	<label for="slides_1"></label>
+		        	<label for="slides_2"></label>
+			    </div>
 		    </div>
-	    
-	  	</div>
-
+		</div>
 	</div>
 
 	<!-- Resources -->
