@@ -92,7 +92,7 @@
     <div class="intro-header">
 		<div id="home" class="col-md-6 col-md-offset-3 text-center wrap_title text-center abcen1 mask">
 			<h2 class="h2_home wow fadeIn" data-wow-delay="0.4s">Speech, language, and Neuroscience Group</h2><!-- Speech, language, and Neuroscience Group -->
-			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">一个由纽约大学、上海纽约大学和华东师范大学联合成立的的研究小组，<br>研究方向主要为认知神经科学、言语以及其他的人类大脑高级认知功能。</h3><!-- A joint research team of New York University Shanghai and East China Normal University, </br>in the field of cognitive neuroscience, focusing on speech, language, and other higher order human cognitive functions. -->
+			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">由上海纽约大学和华东师范大学组成的联合研究小组，<br>研究主要集中在认知神经科学领域，探索言语、语言和其他高阶人类认知功能。</h3><!-- A joint research team of New York University Shanghai and East China Normal University, </br>in the field of cognitive neuroscience, focusing on speech, language, and other higher order human cognitive functions. -->
 			<ul class="list-inline">
 				<li><a href="index.html" class="btn  btn-lg mybutton_standard wow fadeIn" data-wow-delay="0.2s"><span class="">English</span></a>
 				</li>
@@ -122,7 +122,7 @@
 							<img data-original="img/icon/chat.png" alt="" class="lazy" />
 						</div>
 						<div class="col-md-8 box-ct">
-							<h3>语音理解与产生</h3><!-- Speech perception and production -->
+							<h3><a onclick="jump('pubspeech')">语音理解与产生</a></h3><!-- Speech perception and production -->
 							<p></p>
 						</div>
 				  </div>
@@ -133,7 +133,7 @@
 							<img data-original="img/icon/reading.png" alt="" class="lazy" />
 					  </div>
 					  <div class="col-md-8 box-ct">
-						<h3>文字理解与语言学习</h3><!-- Visual word perception and language acquisition -->
+						<h3><a onclick="jump('pubvisual')">文字理解与语言学习</a></h3><!-- Visual word perception and language acquisition -->
 						<p></p> 
 					  </div>
 					</div>
@@ -147,7 +147,7 @@
 							<img data-original="img/icon/brain.png" alt="" class="lazy" />
 					    </div>
 						<div class="col-md-8 box-ct">
-							<h3>语言理解及其偏侧性</h3><!-- Language comprehension and lateralization -->
+							<h3><a onclick="jump('publanguage')">语言理解及其偏侧性</a></h3><!-- Language comprehension and lateralization -->
 							<p></p>
 						</div>
 				  </div>
@@ -158,7 +158,7 @@
 						<img data-original="img/icon/memory.png" alt="" class="lazy" />
 					  </div>
 					  <div class="col-md-8 box-ct">
-						<h3>学习与记忆（与言语相关）</h3><!-- Learning and memory (related to speech and language) -->
+						<h3><a onclick="jump('publearning')">学习、记忆与转化研究（言语相关）</a></h3><!-- Learning and memory (related to speech and language) -->
 						<p></p>
 					  </div>
 					</div>
@@ -225,24 +225,6 @@
 					</div>
 	            </div>
 
-                <div class="col-xs-6 col-sm-3 col-md-3 col-sm-offset-0 col-md-offset-0 col-xs-offset-3 col-sm-offset-0 col-md-offset-0 col-xs-offset-3">
-                    <div class="wow bounceInUp" data-wow-delay="0.2s">
-                    <div class="team boxed-grey">
-                        <div class="inner  tooltip-options "  data-toggle="tooltip" title="Linmin Zhang graduated with a Ph.D. degree in linguistics from New York University in September 2016. She is currently a postdoctoral fellow in the NYU-ECNU Institute of Brain and Cognitive Science at New York University Shanghai. Her research focuses on natural language semantics and pragmatics, its brain basis, and its computational modeling. She uses findings from formal semantics and pragmatics to design psycho-/neuro-linguistic experiments, investigating how meanings are represented and processed by the human brain in real time. Moreover, she uses computational methods to quantitatively study the factors that weigh into the semantic processing by the human brain and develop artificial intelligence models.
-                        Research Interests:
-                        Broad: Neurolinguistics, Psycholinguistics, Natural language semantics;
-                        Narrow:
-                        Neuro-/Psycho-linguistics: Neural basis of semantic representation and composition, Processing of functional words, MEG/EEG.
-                        Formal semantics: Negation, Coordination, Adjectives, Numerals, Attitude reports, Discourse particles, Causality, Bayesian inference.">
-                            <div class="avatar"><img data-original="img/member/Linmin Zhang.jpg" alt="" class="img-responsive img-circle lazy" /></div>
-                            <h4>张琳敏</h4>
-                            <h5 class="subtitle">博士后研究员</h5>
-                            <p class="subtitle"></p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
                  <div class="col-xs-6 col-sm-3 col-md-3 col-sm-offset-0 col-md-offset-0 col-xs-offset-3 col-sm-offset-0 col-md-offset-0 col-xs-offset-3">
                     <div class="wow bounceInUp" data-wow-delay="0.2s">
                     <div class="team boxed-grey">
@@ -255,74 +237,34 @@
                     </div>
                     </div>
                 </div>
+
+                <div class="col-xs-6 col-sm-3 col-md-3 col-sm-offset-0 col-md-offset-0 col-xs-offset-3 col-sm-offset-0 col-md-offset-0 col-xs-offset-3">
+                    <div class="wow bounceInUp" data-wow-delay="0.2s">
+                    <div class="team boxed-grey">
+                        <div class="inner  tooltip-options "  data-toggle="tooltip" title="My research focuses on vocal imitation in humans, through which I wish to understand the sensorimotor interplay underlying speech processing and how social/cultural environment shapes our behaviour across different time scales. To approach this topic, I combine behavioural, acoustic, and neurophysiological research. I am also interested in animal research and to look at vocal imitation behaviour from a comparative perspective.">
+                            <div class="avatar"><img data-original="img/member/Yuchunzi Wu.jpg" alt="" class="img-responsive img-circle lazy" /></div>
+                            <h4>武余春子</h4>
+                            <h5 class="subtitle">博士后研究员</h5>
+                            <p class="subtitle"></p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
 				               
-				
-	            <!-- <div class="col-xs-6 col-sm-3 col-md-3 col-sm-offset-0 col-md-offset-0 col-xs-offset-3 col-sm-offset-0 col-md-offset-0 col-xs-offset-3">
-					<div class="wow bounceInUp" data-wow-delay="0.2s">
-	                <div class="team boxed-grey ">
-	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="Her current work is focused on the second language acquisition of Chinese, she is also broadly interested in the cognitive and brain processes involved in language and learning. Essentially, she loves books, movies, music, and to space out sometimes.">
-							<div class="avatar"><img data-original="img/member/Hoiyan Mak.jpg" alt="" class="img-responsive img-circle lazy" /></div>
-							<h4>Mak Hoiyan</h4>
-							<h5 class="subtitle">研究助理</h5>
-							<p class="subtitle"></p>
-	                    </div>
-	                </div>
-					</div>
-	            </div> -->
-	            
 	        </div>
 
 	        <div class="row">
 		        <div class="col-md-6 col-md-offset-3 text-center wrap_title">
-					<h3>Students</h3>				
+					<h3>学生</h3>				
 				</div>
 			</div>
 			<div class="row">
 	            <div class="col-xs-6 col-sm-2 col-md-2">
 					<div class="wow bounceInUp" data-wow-delay="0.2s">
 	                <div class="team boxed-grey-small">
-	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="目前上海纽约大学神经科学博士研究生项目第三年在读<br>研究兴趣：<br>Mental representations in the human brain; Motor-sensory transformation; Language and speech; Computational Modelings and Bayesian Inference. <br>研究工具:<br> 脑电(EEG) | 脑磁(MEG) | 颅内脑电(ECoG) | 立体脑电(SEEG).">
+	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="目前上海纽约大学神经科学博士研究生项目第四年在读<br>研究兴趣：<br>Mental representations in the human brain; Motor-sensory transformation; Language and speech; Computational Modelings and Bayesian Inference. <br>研究工具:<br> 脑电(EEG) | 脑磁(MEG) | 颅内脑电(ECoG) | 立体脑电(SEEG).">
 							<div class="avatar"><a href="Haosite/index.html"><img data-original="img/member/Hao Zhu.jpg" alt="" class="img-responsive img-circle lazy"/></a> </div>
 							<h4><a href="Haosite/index.html">朱昊</a></h4>
-							<h5 class="subtitle">博士</h5>
-							<p class="subtitle"></p>
-	                    </div>
-	                </div>
-					</div>
-	            </div>
-
-				<div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="0.2s">
-	                <div class="team boxed-grey-small">
-	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="Quiet, simple and heartful. Loves open-source and badminton, aims to reverse-engineering the human brain. A rosseneri, former anarchist, VIP customer of Familymart and heavy user of Amazon Kindle. PHONETICS and HAVING A CAT AS PET considered harmful:) Contact: lbing314ATgmail.com.">
-							<div class="avatar"><img data-original="img/member/Bing Li.jpg" alt="" class="img-responsive img-circle lazy" /></div>
-							<h4>李兵</h4>
-							<h5 class="subtitle">博士</h5>
-							<p class="subtitle"></p>
-	                    </div>
-	                </div>
-					</div>
-	            </div>
-
-	            <div class="ccol-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="0.2s">
-	                <div class="team boxed-grey-small">
-	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="I'm Fuyin Yang, studying as a Ph.D. student in Prof.Tian Lab. My research focus on the neural mechanism of verbal auditory hallucination, especially interest in exploring the dysfunction between speech, auditory, and sensory-motor cortex.">
-							<div class="avatar"><img data-original="img/member/Fuyin Yang.jpg" alt="" class="img-responsive img-circle lazy" /></div>
-							<h4>杨馥银</h4>
-							<h5 class="subtitle">博士</h5>
-							<p class="subtitle"></p>
-	                    </div>
-	                </div>
-					</div>
-	            </div>
-
-	            <div class="ccol-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="0.2s">
-	                <div class="team boxed-grey-small">
-	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="I am a PhD student working with professor Xing Tian. I am mainly interested in neural mechanism of speech production.">
-							<div class="avatar"><img data-original="img/member/Siqi Li.jpg" alt="" class="img-responsive img-circle lazy" /></div>
-							<h4>李思齐</h4>
 							<h5 class="subtitle">博士</h5>
 							<p class="subtitle"></p>
 	                    </div>
@@ -356,7 +298,7 @@
 					</div>
 	            </div>
 				<div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="0.5s">
+					<div class="wow bounceInUp" data-wow-delay="0.2s">
 	                <div class="team boxed-grey-small">
 	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="Leonardo Chen</br>Name: Huangyuan Chen</br>2nd-year master</br>My research interest is on language processing in human brain. I try to find the brain representation when people deal with language information using EEG and Eye movement equipment. ">
 							<div class="avatar"><img data-original="img/member/Huangyuan Chen.jpg" alt="" class="img-responsive img-circle lazy" /></div>
@@ -369,7 +311,7 @@
 	            </div>
 
 	           <div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="0.5s">
+					<div class="wow bounceInUp" data-wow-delay="0.2s">
 	                <div class="team boxed-grey-small">
 	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="Lechuan Wang,1st-year master.<br> Advisor: Qing Cai. <br>Research interests: language processing and impairment mechanism on human brain. <br>Hobbies: yoga, reading, ping-pang & badminton">
 							<div class="avatar"><img data-original="img/member/Lechuan Wang.jpg" alt="" class="img-responsive img-circle lazy" /></div>
@@ -382,7 +324,7 @@
 	            </div>
 
 	            <div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="0.5s">
+					<div class="wow bounceInUp" data-wow-delay="0.2s">
 	                <div class="team boxed-grey-small">
 	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="Now a first-year Ph.D candidate in neuroscience, Prof. Tian's lab. 
 						Research interests: sensory-motor transformation; speech monitoring.
@@ -422,26 +364,13 @@
 					</div>
 	            </div>
 
-	            <!-- <div class="col-xs-6 col-sm-2 col-md-2">
+	            <div class="col-xs-6 col-sm-2 col-md-2">
 					<div class="wow bounceInUp" data-wow-delay="0.5s">
 	                <div class="team boxed-grey-small">
-	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="Email: sei_fsy2012@126.com</br>Research interests: Despite a history of thousand years, language did not exist for such a long time, the mechanism of which is still under heated debate among researchers. As one of the important way to obtain information, reading does play a pivotal role in humans’ lives, while has a relatively short period of revolution. Recently, my research interest concentrates on the behavioral and neural basis of reading, expecting to examine the role of top-down as well as bottom-up factors playing in the eye movements of Chinese readers, especially the part of anticipatory effects in reading. I would try to establish an eye movement control model which fits better for Chinese readers. Except for my academic devotion, I am an amateur novelist.">
-							<div class="avatar"><img data-original="img/member/Siyi Fang.jpg" alt="" class="img-responsive img-circle lazy" /></div>
-							<h4>方思怡</h4>
-							<h5 class="subtitle">硕士</h5>
-							<p class="subtitle"></p>
-	                    </div>
-	                </div>
-					</div>
-	            </div> -->
-
-	            <!-- div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="0.5s">
-	                <div class="team boxed-grey-small">
-	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="I graduated from Zhengjiang Normal University with an accounting bachelor degree. I am a research assistant in Dr Xing Tian's lab at NYU Shanghai. My interests focuses on the connection between human intelligence and artificial intelligence ,especially the cognitive foundation and computational modeling of language comprehension.">
-							<div class="avatar"><img data-original="img/member/Yunyun Shen.jpg" alt="" class="img-responsive img-circle lazy" /></div>
-							<h4>沈云云</h4>
-							<h5 class="subtitle">硕士</h5>
+	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="我是田兴老师实验室2022级博士生李欣晶，博士期间的课题聚焦于运动感觉转换中一般准备阶段的时间预期和产生的认知神经机制。此前采用眼动、EEG技术探究了言语理解中不同层级（音形义）的预测效应，相关论文发表于JEP：HPP等期刊。">
+							<div class="avatar"><img data-original="img/member/Xinjing Li.jpg" alt="" class="img-responsive img-circle lazy" /></div>
+							<h4>李欣晶</h4>
+							<h5 class="subtitle">博士</h5>
 							<p class="subtitle"></p>
 	                    </div>
 	                </div>
@@ -450,45 +379,6 @@
 
 	            <div class="col-xs-6 col-sm-2 col-md-2">
 					<div class="wow bounceInUp" data-wow-delay="0.5s">
-	                <div class="team boxed-grey-small">
-	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="I'm 3rd year Master student of ECNU majoring in cognitive neuroscience. Currently, I'm working on  relation between gestures and perception of loudness.">
-							<div class="avatar"><img data-original="img/member/Ziqing Wang.jpg" alt="" class="img-responsive img-circle lazy" /></div>
-							<h4>王子卿</h4>
-							<h5 class="subtitle">硕士</h5>
-							<p class="subtitle"></p>
-	                    </div>
-	                </div>
-					</div>
-	            </div> -->
-
-	            <div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="0.5s">
-	                <div class="team boxed-grey-small">
-	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="Yang Danfeng, master candidate At present, my main research direction is the influence of gestures on language learning, and I hope to carry out further research in the postgraduate stage.At ordinary times, I like to chat, read books and walk, like to appreciate different local customs.In the future, I hope to be a people's teacher.">
-							<div class="avatar"><img data-original="img/member/Danfeng Yang.jpg" alt="" class="img-responsive img-circle lazy" /></div>
-							<h4>杨丹凤</h4>
-							<h5 class="subtitle">硕士</h5>
-							<p class="subtitle"></p>
-	                    </div>
-	                </div>
-					</div>
-	            </div>
-
-	            <!-- <div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="0.8s">
-	                <div class="team boxed-grey-small">
-	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="">
-							<div class="avatar"><img data-original="img/member/Girl.png" alt="" class="img-responsive img-circle lazy" /></div>
-							<h4>杨阳</h4>
-							<h5 class="subtitle">硕士</h5>
-							<p class="subtitle"></p>
-	                    </div>
-	                </div>
-					</div>
-	            </div> -->
-
-	            <div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="0.8s">
 	                <div class="team boxed-grey-small">
 	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="My name is Xiaodan Zheng, I'm interested in human cognitive abilities and limitations.">
 							<div class="avatar"><img data-original="img/member/Xiaodan Zheng.jpg" alt="" class="img-responsive img-circle lazy" /></div>
@@ -501,7 +391,7 @@
 	            </div>
 
 	            <div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="0.8s">
+					<div class="wow bounceInUp" data-wow-delay="0.5s">
 	                <div class="team boxed-grey-small">
 	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="Name's HeKan who once fell into the hole of physics which is black and deliver sound of low frequency in a band whose members like soccer.">
 							<div class="avatar"><img data-original="img/member/Kan He.jpg" alt="" class="img-responsive img-circle lazy" /></div>
@@ -514,7 +404,7 @@
 	            </div>
 
 	            <div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="0.8s">
+					<div class="wow bounceInUp" data-wow-delay="0.5s">
 	                <div class="team boxed-grey-small">
 	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="Hi～ I’m Xikang (Silicon), a master student at NET Program with a physics background. My long term interest is computational neuroscience. I hope to use the mathematical language to appropriately describe the process of our neural computation. <br>Recently I’m interested in using Bayesian inference framework to investigate how we distinguish our own motor action effect from total sensory feedback which also contains environmental perturbation effects. Besides that, neural oscillation and neural magnifold are also 2 big topics of my personal research interests. <br>Meanwhile I also believe we are on the eve of the time neuroscience techs widely used in our daily life, like BCI etc. So another topic I cared about was the commercial opportunity of neuroscience.">
 							<div class="avatar"><img data-original="img/member/Xikang Luo.jpg" alt="" class="img-responsive img-circle lazy" /></div>
@@ -525,22 +415,6 @@
 	                </div>
 					</div>
 	            </div>
-
-
-	            <div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="0.8s">
-	                <div class="team boxed-grey-small">
-	                    <div class="inner  tooltip-options "  data-toggle="tooltip" title="喜欢吃饭，喜欢脑和人类，想学认知科学哲学">
-							<div class="avatar"><img data-original="img/member/Shuqin Ma.jpg" alt="" class="img-responsive img-circle lazy" /></div>
-							<h4>马淑钦</h4>
-							<h5 class="subtitle">硕士</h5>
-							<p class="subtitle"></p>
-	                    </div>
-	                </div>
-					</div>
-	            </div>
-
-	            
 
 	        </div>
 	        
@@ -553,51 +427,12 @@
 			<div class="row">
 
 	            <div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="1.0s">
-	                <div class="team boxed-grey-small ">
-	                    <div class="inner  tooltip-options " data-toggle="tooltip" title="Qian is an undergraduate student in neural science at New York University Shanghai. He joined the lab in fall 2019 and is a trainee in NYU's Training Program in Computational Neuroscience. He is interested in how people internally represent the world (with uncertainty) and how such internal models benefit various behaviors such as perception, movement, and decision making. A methodological opportunist, he aims at answering this question through multiple lenses including behaviors, neurophysiology, and computational models.">
-							<div class="avatar"><img data-original="img/member/Qian Chu.jpg" alt="" class="img-responsive img-circle lazy" /></div>
-							<h4>褚乾</h4>
-							<h5 class="subtitle">上海纽约大学</h5>
-							<p class="subtitle"></p>
-	                    </div>
-	                </div>
-					</div>
-	            </div>
-
-	            <div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="1.0s">
-	                <div class="team boxed-grey-small ">
-	                    <div class="inner  tooltip-options " data-toggle="tooltip" title="">
-							<div class="avatar"><img data-original="img/member/Boy.png" alt="" class="img-responsive img-circle lazy" /></div>
-							<h4>王效轩</h4>
-							<h5 class="subtitle">上海纽约大学</h5>
-							<p class="subtitle"></p>
-	                    </div>
-	                </div>
-					</div>
-	            </div>
-
-	            <div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="1.0s">
-	                <div class="team boxed-grey-small ">
-	                    <div class="inner  tooltip-options " data-toggle="tooltip" title="">
-							<div class="avatar"><img data-original="img/member/Girl.png" alt="" class="img-responsive img-circle lazy" /></div>
-							<h4>高熠</h4>
-							<h5 class="subtitle">上海纽约大学</h5>
-							<p class="subtitle"></p>
-	                    </div>
-	                </div>
-					</div>
-	            </div>
-
-	            <div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="1.0s">
+					<div class="wow bounceInUp" data-wow-delay="0.7s">
 	                <div class="team boxed-grey-small ">
 	                    <div class="inner  tooltip-options " data-toggle="tooltip" title="Hi! I'm Tianqi Zhan, currently a neuroscience-major Junior at NYU Shanghai. Brain mysteries, especially how language is processed and produced, have always been fascinating to me. Therefore, I started my research experience with Tian's group in 2021 Spring. Since the 2021 Summer Undergraduate Research Program, I have been working with Danfeng Yang on a gesture-facilitated language learning project. Keep exploring and having fun!">
 							<div class="avatar"><img data-original="img/member/Tianqi Zhan.jpg" alt="" class="img-responsive img-circle lazy" /></div>
 							<h4>詹添淇</h4>
-							<h5 class="subtitle">NYUSH</h5>
+							<h5 class="subtitle">上纽大</h5>
 							<p class="subtitle"></p>
 	                    </div>
 	                </div>
@@ -605,12 +440,116 @@
 	            </div>
 
 	            <div class="col-xs-6 col-sm-2 col-md-2">
-					<div class="wow bounceInUp" data-wow-delay="1.0s">
+					<div class="wow bounceInUp" data-wow-delay="0.7s">
 	                <div class="team boxed-grey-small ">
 	                    <div class="inner  tooltip-options " data-toggle="tooltip" title="NYUSH Class of 2023, Neuroscience major, interested in sensory to motor transformation.">
 							<div class="avatar"><img data-original="img/member/Junyi Ji.jpg" alt="" class="img-responsive img-circle lazy" /></div>
 							<h4>季珺奕</h4>
-							<h5 class="subtitle">NYUSH</h5>
+							<h5 class="subtitle">上纽大</h5>
+							<p class="subtitle"></p>
+	                    </div>
+	                </div>
+					</div>
+	            </div>
+
+	            <div class="col-xs-6 col-sm-2 col-md-2">
+					<div class="wow bounceInUp" data-wow-delay="0.7s">
+	                <div class="team boxed-grey-small ">
+	                    <div class="inner  tooltip-options " data-toggle="tooltip" title="This is Yunzhe(Rachel) Sun. NYUSH Class of 2023, major in Neural Science and Data Science, interested in the neural mechanism of language and emotion. Outside academia, I like hiking and traveling.">
+							<div class="avatar"><img data-original="img/member/Yunzhe Sun.jpg" alt="" class="img-responsive img-circle lazy" /></div>
+							<h4>孙蕴喆</h4>
+							<h5 class="subtitle">上纽大</h5>
+							<p class="subtitle"></p>
+	                    </div>
+	                </div>
+					</div>
+	            </div>
+
+	            <div class="col-xs-6 col-sm-2 col-md-2">
+					<div class="wow bounceInUp" data-wow-delay="0.7s">
+	                <div class="team boxed-grey-small ">
+	                    <div class="inner  tooltip-options " data-toggle="tooltip" title="Hi this is Shuying! I’m a senior student from NYU Shanghai, majoring in neuroscience. I’m currently working on a Bayesian inference project with Xikang Lou, but I’m also interested in speech perception and production. ">
+							<div class="avatar"><img data-original="img/member/Shuying Xiao.jpg" alt="" class="img-responsive img-circle lazy" /></div>
+							<h4>肖疏影</h4>
+							<h5 class="subtitle">上纽大</h5>
+							<p class="subtitle"></p>
+	                    </div>
+	                </div>
+					</div>
+	            </div>
+
+	            <div class="col-xs-6 col-sm-2 col-md-2">
+					<div class="wow bounceInUp" data-wow-delay="0.7s">
+	                <div class="team boxed-grey-small ">
+	                    <div class="inner  tooltip-options " data-toggle="tooltip" title="Hi! I'm Boxuan, a New York University Shanghai junior student majoring in neuroscience and minoring in psychology. My research interest is in cognitive neuroscience, especially neurolinguistics and auditory processing. I joined professor Tian's SLANG lab in December 2021. In the 2022 summer, I participated in Jiaqiu Sun's project on the temporal recalibration effect in the auditory system as a Dean's Undergraduate Research Fund program.">
+							<div class="avatar"><img data-original="img/member/Boxuan Li.jpg" alt="" class="img-responsive img-circle lazy" /></div>
+							<h4>李帛炫</h4>
+							<h5 class="subtitle">上纽大</h5>
+							<p class="subtitle"></p>
+	                    </div>
+	                </div>
+					</div>
+	            </div>
+
+	            <div class="col-xs-6 col-sm-2 col-md-2">
+					<div class="wow bounceInUp" data-wow-delay="0.7s">
+	                <div class="team boxed-grey-small ">
+	                    <div class="inner  tooltip-options " data-toggle="tooltip" title="James is an undergraduate student in Neural Science at New York University Shanghai. He joined the lab in the Fall of 2021. He is currently working on phonological-lexical representation transformation in speech production. He aims to apply novel analysis methods like Representation Similarity Analysis (RSA) and decoding analysis to brain electrophysiology data.">
+							<div class="avatar"><img data-original="img/member/James Chen.jpg" alt="" class="img-responsive img-circle lazy" /></div>
+							<h4>陈子骅</h4>
+							<h5 class="subtitle">上纽大</h5>
+							<p class="subtitle"></p>
+	                    </div>
+	                </div>
+					</div>
+	            </div>
+
+	            <div class="col-xs-6 col-sm-2 col-md-2">
+					<div class="wow bounceInUp" data-wow-delay="0.9s">
+	                <div class="team boxed-grey-small ">
+	                    <div class="inner  tooltip-options " data-toggle="tooltip" title="">
+							<div class="avatar"><img data-original="img/member/GC.jpg" alt="" class="img-responsive img-circle lazy" /></div>
+							<h4>耿昱</h4>
+							<h5 class="subtitle">上纽大</h5>
+							<p class="subtitle"></p>
+	                    </div>
+	                </div>
+					</div>
+	            </div>
+
+	            <div class="col-xs-6 col-sm-2 col-md-2">
+					<div class="wow bounceInUp" data-wow-delay="0.9s">
+	                <div class="team boxed-grey-small ">
+	                    <div class="inner  tooltip-options " data-toggle="tooltip" title="">
+							<div class="avatar"><img data-original="img/member/Shanglin Yang.jpg" alt="" class="img-responsive img-circle lazy" /></div>
+							<h4>杨尚霖</h4>
+							<h5 class="subtitle">上纽大</h5>
+							<p class="subtitle"></p>
+	                    </div>
+	                </div>
+					</div>
+	            </div>
+
+	            <div class="col-xs-6 col-sm-2 col-md-2">
+					<div class="wow bounceInUp" data-wow-delay="0.9s">
+	                <div class="team boxed-grey-small ">
+	                    <div class="inner  tooltip-options " data-toggle="tooltip" title="Hello! I am Ruoyu Wu, an NYU Shanghai undergraduate student majoring in neuroscience from class of 2025. I find previous work done by Danfeng and Tianqi in gesture and language acquisition very interesting and reminiscent of my life experiences as a human being, and began working with Tianqi on a follow-up of this experiment starting January 2023. I would love to keep exploring different topics and use my brain to see what our brains have to offer.">
+							<div class="avatar"><img data-original="img/member/Ruoyu Wu.jpg" alt="" class="img-responsive img-circle lazy" /></div>
+							<h4>吴若瑜</h4>
+							<h5 class="subtitle">上纽大</h5>
+							<p class="subtitle"></p>
+	                    </div>
+	                </div>
+					</div>
+	            </div>
+
+	            <div class="col-xs-6 col-sm-2 col-md-2">
+					<div class="wow bounceInUp" data-wow-delay="0.9s">
+	                <div class="team boxed-grey-small ">
+	                    <div class="inner  tooltip-options " data-toggle="tooltip" title="Shucheng is an undergraduate student in Neuroscience major from New York University Shanghai. Her research interest is using computational modeling to represent human cognition such as decision-making, languages, perception, and memory. She is currently working with Yuhan and Xikang on sensory-motor control of speech production. ">
+							<div class="avatar"><img data-original="img/member/Shucheng Li.jpg" alt="" class="img-responsive img-circle lazy" /></div>
+							<h4>李舒澄</h4>
+							<h5 class="subtitle">上纽大</h5>
 							<p class="subtitle"></p>
 	                    </div>
 	                </div>
@@ -625,70 +564,27 @@
 				</div>	
 			</div>	
 
-			<li><h5><em>Xiaoluan Liu</em>: Postdoc, Assistant professor at ECNU.</h5> </li>
+				<li><h5><em>Linmin Zhang</em>: Postdoc, Assistant Professor of Practice at NYU Shanghai.</h5> </li>
 
-			<li><h5><em>Wenjia Zhang</em>: Postdoc, Postdoc in The Chinese University of Hong Kong.</h5> </li>
+				<li><h5><em>Bing Li</em>: Phd, Postdoc in Haskins Laboratories of Yale University.</h5> </li>
 
-			<li><h5><em>Shuai Wang</em>: Phd, Postdoc in Haskins Laboratories of Yale University.</h5> </li>
+				<li><h5><em>Fuyin Yang</em>: Phd, Postdoc at the Shanghai Mental Health Center.</h5> </li>
 
-			<li><h5><em>Rui Feng</em>: Master student, Industry.</h5> </li>
+				<li><h5><em>Siqi Li</em>: Phd, Postdoc at ECNU.</h5> </li>
 
-			<li><h5><em>Jinbiao Yang</em>: Master student & RA, Phd student in MPI for Psycholinguistics (Radbound University).</h5> </li>
+				<li><h5><em>Danfeng Yang</em>: Master student, Education.</h5> </li>
 
-			<li><h5><em>Shuang Geng</em>: Master student, Phd student in BCBL.</h5> </li>
+				<li><h5><em>Shuqin Ma</em>: Master student, RA at Fudan University.</h5> </li>
 
-			<li><h5><em>Ruiqing Zhang</em>: Master student, Industry.</h5> </li>
+				<li><h5><em>Qian Chu</em>: Undergraduate student, PhD student at the University of Toronto and MPI</h5> </li>
 
-			<li><h5><em>Sainan Shi</em>: Master student, Master student in ECNU.</h5> </li>
+				<li><h5><em>Xiaoxuan Wang</em>: Undergraduate student, graduate student at Cambridge University</h5> </li>
 
-			<li><h5><em>Jieyin Feng</em>: Master student, Phd student in BrainLENS UCONN.</h5> </li>
+				<li><h5><em>Yi Gao</em>: Undergraduate student, PhD student at Oxford University</h5> </li>
 
-			<li><h5><em>Lingting Wang</em>: Master student, Education.</h5> </li>
+				<li><h5><em>Jialu Li</em>: Undergraduate student, graduate student at UCL</h5> </li>
 
-			<li><h5><em>Ou Ma</em>: Master student, Education.</h5> </li>
-
-			<li><h5><em>Siyi Fang</em>: Master student.</h5> </li>
-
-			<li><h5><em>Yunyun Shen</em>: Master student, Phd student in University of Paris-Saclay.</h5> </li>
-
-			<li><h5><em>Ziqing Wang</em>: Master student, Industry.</h5> </li>
-
-			<li><h5><em>Yanzhu Li</em>: RA, Business.</h5> </li>
-
-			<li><h5><em>Fan Bai</em>: RA, Phd student in MPI for Psycholinguistics (Radbound University).</h5> </li>
-
-			<li><h5><em>Qihui Xu</em>: RA, Phd student in Hunter College of CUNY.</h5> </li>
-
-			<li><h5><em>Anna Zhen</em>: RA, Phd student in Indiana University.</h5> </li>
-
-			<li><h5><em>Hoiyan Mak</em>: RA.</h5> </li>
-
-			<li><h5><em>Defne Inhan</em>: Intern, RA in Columbia University.</h5> </li>
-
-			<li><h5><em>Tehreem Nihar</em>: Intern.</h5> </li>
-
-			<li><h5><em>Feng Lin</em>: Intern, Master student in Utrecht University.</h5> </li>
-
-			<li><h5><em>Xingye Chen</em>: Intern, Master student in Columbia University.</h5> </li>
-
-			<li><h5><em>Yiling Liu</em>: Intern, Master student in University of Michigan.</h5> </li>
-
-			<li><h5><em>Stella Yuan</em>: Intern, Carnegie Mellon University.</h5> </li>
-
-			<li><h5><em>Xupu Zhang</em>: Undergraduate student, Imperial College.</h5> </li>
-
-			<li><h5><em>Kexin Cai</em>: Undergraduate student, Master student in Radbound University.</h5> </li>
-
-			<li><h5><em>Xuefei Wang</em>: Undergraduate student, Ph.D Student in Caltech.</h5> </li>
-			
-			<li><h5><em>Linyang He</em>: Undergraduate student.</h5> </li>
-
-			<li><h5><em>Zheng Li</em>: Undergraduate student, UCSD</h5> </li>
-
-			<li><h5><em>Yuqi Hang</em>: Undergraduate student, master student in Harvard University</h5> </li>
-
-			<li><h5><em>Xiao Ma</em>: Undergraduate student.</h5> </li>
-
+				<li><h5><a href="alumni.html"><u>点击查看完整名单</u></a></h5> </li>
 		</div>
 	</div>
 
@@ -704,26 +600,26 @@
 		        	<h2>发表文章</h2>
 
 					<h4 style="text-align:left;">
-					    &LongLeftArrow;	 Topic Order
+					    <!-- &LongLeftArrow;	 主题顺序 -->
 					    <span style="float:right;">
-					        Chronological Order &LongRightArrow;
+					        时间顺序 &LongRightArrow;
 					    </span>
 					</h4>
-
-		        	<h3>Speech Perception and Production</h3>
+					<br>
+					
+		        	<h3 id='pubspeech'>语音理解与产生</h3>
 		        	<br>
-		        	<blockquote><p class="to_left"><a href="papers/Yu2021_Article_AlteredBrainActivityInTheBilat.pdf">Yu, L., Guo, L., Fang, X., Yang, F., Chen, Y., Wang, Y., ... & Zhang, C. (2021). Altered brain activity in the bilateral frontal cortices and neural correlation with cognitive impairment in schizophrenia. <em>Brain imaging and behavior</em>, 1-9. (PDF)</a></p></blockquote>
+		        	<blockquote><p class="to_left"><a href="papers/The generic inhibitory function of corollary discharge in motor intention.pdf">Zheng, X., Zhu, H., Li, S., & Tian, X. (2022). The generic inhibitory function of corollary discharge in motor intention: evidence from the modulation effects of speech preparation on the late components of auditory neural responses. <em>Eneuro</em>. (PDF)</a></p></blockquote>
+		        	<blockquote><p class="to_left"><a href="papers/Dual-stream cortical feedbacks mediate sensory prediction.pdf">Chu, Q., Ma, O., Hang, Y., & Tian, X. (2022). Dual-stream cortical feedbacks mediate sensory prediction. <em>bioRxiv</em>, 2022-07. (PDF)</a></p></blockquote>
+		        	<blockquote><p class="to_left"><a href="papers/Neural mechanisms of musical syntax and tonality, and the effect of musicianship.pdf">Zhang, R., Jiang, L., Tao, L., Zhou, Y. D., & Cai, Q. (2022). Neural mechanisms of musical syntax and tonality, and the effect of musicianship. <em>bioRxiv</em>, 2022-10. (PDF)</a></p></blockquote>
+		        	<blockquote><p class="to_left"><a href="papers/Imagined speech can be decoded from low- and cross-frequency intracranial EEG features.pdf">Proix, T., Delgado Saa, J., Christen, A., Martin, S., Pasley, B. N., Knight, R. T., ... & Giraud, A. L. (2022). Imagined speech can be decoded from low-and cross-frequency intracranial EEG features. <em>Nature communications</em>, 13(1), 48. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Liu2021_Article_MultipleProsodicMeaningsAreCon.pdf">Liu, X., Xu, Y., Zhang, W., & Tian, X. (2021). Multiple prosodic meanings are conveyed through separate pitch ranges: Evidence from perception of focus and surprise in Mandarin Chinese. <em>Cognitive, Affective, & Behavioral Neuroscience</em>, 1-12. (PDF)</a></p></blockquote>
-					<blockquote><p class="to_left"><a href="papers/Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia.pdf">Yang, F., Zhu, H., Yu, L., Lu, W., Zhang, C., & Tian, X. (2021). Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia. <em>Behavioural Brain Research</em>, 113411. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Manual Gestures Modulate Early Neural Responses in Loudness Perception.pdf">Sun, J., Wang, Z., & Tian, X. (2021). Manual Gestures Modulate Early Neural Responses in Loudness Perception. <em>Frontiers in neuroscience</em>, 1106. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Neural substrates of Chinese lexical production.pdf">Tao, L., Zhu, M., & Cai, Q. (2020). Neural substrates of Chinese lexical production: The role of domain-general cognitive functions. <em>Neuropsychologia</em>, 138, 107354. (PDF)</a></p></blockquote>
-					<blockquote><p class="to_left"><a href="papers/Functional Status of Hypothalamic–Pituitary–Thyroid and Hypothalamic–Pituitary–Adrenal Axes in Hospitalized Schizophrenics in Shanghai.pdf">Zhu, Y., Ji, H., Tao, L., Cai, Q., Wang, F., Ji, W., ... & Fang, Y. (2020). Functional Status of Hypothalamic–Pituitary–Thyroid and Hypothalamic–Pituitary–Adrenal Axes in Hospitalized Schizophrenics in Shanghai. <em>Frontiers in Psychiatry</em>, 11. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Corollary discharge versus efference copy.pdf">Li, S., Zhu, H., & Tian, X. (2020). Corollary discharge versus efference copy: Distinct neural signals in speech preparation differentially modulate auditory responses. <em>Cerebral Cortex</em>, bhaa154. (PDF)</a></p></blockquote>
-					<blockquote><p class="to_left"><a href="papers/Multi-scale predictions distinctively modulate tone perception in schizophrenia patients with auditory verbal hallucinations.pdf">Yang, F., Zhu, H., Yu, L., Lu, W., Zhang, C., & Tian, X. (2020) Multi-scale predictions distinctively modulate tone perception in schizophrenia patients with auditory verbal hallucinations. <em>bioRxiv</em>, 204495. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/The dynamic and task dependent representational transformation between the motor and sensory systems during speech production.pdf">Zhang, W., Liu, Y., Wang, X., & Tian, X. (2020). The Dynamic and Task-dependent Representational Transformation Between the Motor and Sensory Systems during Speech Production. <em>Cognitive Neuroscience</em>. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Constraint structure of ancient Chinese poetry facilitates speech content grouping.pdf"> Teng, X., Ma, M., Yang, J., Blohm, S., Cai, Q., & Tian, X. (2020) Constraint structure of ancient Chinese poetry facilitates speech content grouping. <em>Current Biology</em>, 30(7), 1299-1305. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Mental operations in rhythm.pdf"> Li, Y., Luo, H., & Tian, X. (2020). Mental operations in rhythm: Motor-to-sensory transformation mediates imagined singing. <em>PLoS biology</em>, 18(10), e3000504. (PDF)</a></p></blockquote>
-					<blockquote><p class="to_left"><a href="papers/Effects and potential mechanisms of transcranial direct current stimulation (tDCS) on auditory hallucinations.pdf">Yang, F., Fang, X., Tang, W., Hui, L., Chen, Y., Zhang, C., & Tian, X. (2019). Effects and potential mechanisms of transcranial direct current stimulation (tDCS) on auditory hallucinations: A meta-analysis. <em>Psychiatry research</em>, 273, 343. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Revealing the Temporal Dynamics in Noninvasive Electrophysiological recordings with Topography-based Analyses.pdf"> Wang, X., Zhu, H., & Tian, X. (2019). Revealing the Temporal Dynamics in Non-invasive Electrophysiological recordings with Topography-based Analyses. <em>bioRxiv</em>, 779546. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Distinct Mechanisms of Imagery Differentially Influence Speech Perception.pdf"> Ma, O., & Tian, X. (2019). Distinct mechanisms of imagery differentially influence speech perception. <em>eNeuro</em>, 6(5). (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Theta band oscillations reflect more than entrainment behavioral and neural evidence demonstrates an active chunking process.pdf">Teng, X., Tian, X., Doelling, K., & Poeppel, D. (2018). Theta band oscillations reflect more than entrainment: behavioral and neural evidence demonstrates an active chunking process. <em>European Journal of Neuroscience</em>, 48(8), 2770-2782. (PDF)</a></p></blockquote>
@@ -737,14 +633,14 @@
 					<blockquote><p class="to_left"><a href="papers/Dynamics of self-monitoring and error detection in speech production.pdf">Tian, X., &amp; Poeppel, D. (2015). Dynamics of self-monitoring and error detection in speech production: evidence from mental imagery MEG.  <em>Journal of Cognitive Neuroscience.</em> 27(2), 352-364.(PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Multiple levels of linguistic and paralinguistic features contribute to voice recognition.pdf">Zarate, J.M.<em>, Tian, X.</em>, Woods, K.J.P.,&amp; Poeppel, D. (2015). Multiple levels of linguistic and paralinguistic features contribute to voice recognition. <em>Scientific Reports</em>. 5: 11475. doi: 10.1038/srep11475 (*equal contribution)(PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/The effect of imagination on stimulation.pdf">Tian, X., &amp; Poeppel, D. (2013). The effect of imagination on stimulation: the functional specificity of efference copies in speech processing.  <em>Journal of Cognitive Neuroscience.</em> 25(7), 1020-1036.(PDF)</a></p></blockquote>
-					<blockquote><p class="to_left"><a href="papers/Change detection through connectivity reduction.pdf">Tian, X., &amp; Huber, D.E. (2013). Playing ‘Duck Duck Goose’ with neurons: Change detection through connectivity reduction. <em>Psychological Science</em>.24(6), 819–827.(PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Mental imagery of speech linking motor and sensory systems through internals imulation.pdf">Tian, X., &amp; Poeppel, D. (2012). Mental imagery of speech: linking motor and sensory systems through internals imulation. <em>Front. Hum. Neurosci.</em> 6:314. doi: 10.3389/fnhum.2012.00314(PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/TopoToolbox.pdf">Tian, X., Poeppel, D., &amp; Huber, D.E. (2011). TopoToolbox: Using sensor topography to calculate psychologically meaningful measures from event-related EEG/MEG. <em>Computational Intelligence and Neuroscience</em>. 2011,doi:10.1155/2011/674605(PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Mental imagery of speech andmovement implicates the dynamics of internal forward models.pdf">Tian, X., &amp; Poeppel, D. (2010). Mental imagery of speech andmovement implicates the dynamics of internal forward models. <em>Front. Psychology,</em> 1:166. doi: 10.3389/fpsyg.2010.00166(PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Measures of spatial similarity and response magnitude in MEG andscalp EEG.pdf">Tian, X., &amp; Huber,D.E. (2008). Measures of spatial similarity and response magnitude in MEG andscalp EEG. <em>Brain Topography</em>, <em>20</em>,131-141.(PDF)</a></p></blockquote>
 
-					<h3>Visual Word Perception and Language Acquisition</h3>
+					<h3 id='pubvisual'>文字理解与语言学习</h3>
 					<br>
+					<blockquote><p class="to_left"><a href="papers/How characters are learned leaves its mark on the neural substrates of Chinese reading.pdf">Feng, J., Mak, H. Y., Wang, J., & Cai, Q. (2022). How characters are learned leaves its mark on the neural substrates of Chinese reading. <em>Eneuro</em>. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Effects of cumulative language exposure.pdf">Tao, L., Cai, Q., & Gollan, T. H. (2021). Effects of cumulative language exposure on heritage and majority language skills: Spanish and Mandarin heritage speakers in the USA. <em>Linguistic Approaches to Bilingualism</em>, 11(2), 168-191. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/How Do We Segment Text.pdf"> Yang, J., Cai, Q., & Tian, X. (2020). How do we segment text? Two-stage chunking operation in reading. <em>eNeuro</em>, 7(3), 0425-19.2020. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/NewPerspectivesontheAgingLexicon.pdf">Wulff, D. U., De Deyne, S., Jones, M. N., Mata, R., & Aging Lexicon Consortium. (2019). New perspectives on the aging lexicon. <em>Trends in cognitive sciences</em>, 23(8), 686-698. (PDF)</a></p></blockquote>
@@ -752,12 +648,13 @@
 					<blockquote><p class="to_left"><a href="papers/Interhemispheric communication influences reading behavior.pdf">Van der Haegen, L., Cai, Q., Stevens, M.A., and Brysbaert, M. (2013). Interhemispheric communication influences reading behavior.<em> Journal of Cognitive Neuroscience</em>25(9): 1442-1452.(PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/The effects of visual imagery on face identification.pdf">Wu, J., Duan, H., Tian, X., Wang, P.,&amp; Zhang, K. (2012). The effects of visual imagery on face identification: an ERP study. <em>Front. Hum. Neurosci.</em> 6:305. doi: 10.3389/fnhum.2012.00305(PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/SUBTLEXCH Chinese word and character frequencies based on film subtitles.pdf">Cai, Q.*, and Brysbaert, M. *(2010). *SUBTLEX-CH: Chinese word and character frequencies based on film subtitles. PLoS One 5(6): e10729.(PDF) (Chinese word frequencies.</a> Online search: <a href='http://crr.ugent.be/isubtlex_ch/' target='_blank' >http://crr.ugent.be/isubtlex_ch/</a>)</p></blockquote>
-					<blockquote><p class="to_left"><a href="papers/Testing an associative account of semantic satiation.pdf">Tian, X., &amp; Huber, D.E. (2010). Testing an associative account of semantic satiation. <em>Cognitive Psychology,60</em>, 267-290.(PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Early involvement of dorsal and ventral pathways in visual word recognition.pdf">Rosazza, C., Cai, Q., Minati, L., Paulignan, Y., and Nazir, T.A. (2009). Early involvement of dorsal and ventral pathways in visual word recognition: An ERP study. <em>Brain Res</em> 1272: 32-44.(PDF)</a></p></blockquote>
-					<blockquote><p class="to_left"><a href="papers/The Dynamics of Integration and Separation.pdf">Huber, D. E., Tian, X., Curran, T., O’Reilly, C, &amp; Woroch, B. (2008). The dynamics of integration and separation: ERP, MEG, and neural network studies of immediate repetition effects. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, 34,1389-1416.(PDF)</a></p></blockquote>
-
-					<h3>Language Comprehension and Lateralization</h3>
+					
+					<h3 id='publanguage'>语言理解及其偏侧性</h3>
 					<br>
+					<blockquote><p class="to_left"><a href="papers/Delta-band neural tracking primarily reflects.pdf">Lu, Y., Jin, P., Ding, N., & Tian, X. (2022). Delta-band neural tracking primarily reflects rule-based chunking instead of semantic relatedness between words. <em>Cerebral Cortex</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Neural signatures of second language proficiency in narrative processing.pdf">Zhang, R., Wang, J., Lin, H., Turk-Browne, N. B., & Cai, Q. (2022). Neural signatures of second language proficiency in narrative processing. <em>bioRxiv</em>, 2022-10. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/CCLOWW.pdf">Li, L., Yang, Y., Song, M., Fang, S., Zhang, M., Chen, Q., & Cai, Q. (2022). CCLOWW: A grade-level Chinese children’s lexicon of written words. <em>Behavior Research Methods</em>, 1-16. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Bilingualism and domain-general cognitive.pdf">Tao, L., Wang, G., Zhu, M., & Cai, Q. (2021). Bilingualism and domain-general cognitive functions from a neural perspective: A systematic review. <em>Neuroscience & Biobehavioral Reviews</em>. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/A Cross-linguistic Study into the Contribution.pdf">De Deyne, S., Cabana, Á., Li, B., Cai, Q., & McKague, M. (2020). A Cross-linguistic Study into the Contribution of Affective Connotation in the Lexico-semantic Representation of Concrete and Abstract Concepts. <em>CogSci</em>. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Lateralization in the dichotic listening of tones is influenced by the content of speech.pdf"> Mei, N., Flinker, A., Zhu, M., Cai, Q., & Tian, X. (2020). Lateralization in the dichotic listening of tones is influenced by the content of speech. <em>Neuropsychologia</em>, 140, 107389. (PDF)</a></p></blockquote>
@@ -776,23 +673,47 @@
 					<blockquote><p class="to_left"><a href="papers/The left ventral occipitotemporal response to words depends on language lateralization but not on visual familiarity.pdf">Cai, Q.*, Paulignan, Y., Brysbaert, M., Ibarrola, D., &amp; Nazir, T.A. (2010). The left ventral occipito-temporal response to words depends on language lateralization but not on visual familiarity. <em>Cereb Cortex</em> 20: 1153–1163.(PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Cerebral lateralization of frontal lobe language processes and lateralization of the posterior visual word processing system.pdf">Cai, Q.*, Lavidor, M., Brysbaert, M., Paulignan, Y., and Nazir, T. A. (2008). Cerebral lateralization of frontal lobe language processes and lateralization of the posterior visual word processing system. <em>J Cogn Neurosci</em> 20: 672-681.(PDF)</a></p></blockquote>
 
-					<h3>Learning and Memory (speech and language related)</h3>
+					<h3 id='publearning'>学习、记忆与转化研究（言语相关）</h3>
 					<br>
+					<blockquote><p class="to_left"><a href="papers/Dissociable plasticity of visual-motor system.pdf">Yin, D., Wang, X., Zhang, X., Yu, Q., Wei, Y., Cai, Q., ... & Li, L. (2021). Dissociable plasticity of visual-motor system in functional specialization and flexibility in expert table tennis players. <em>Brain Structure and Function</em>, 226(6), 1973-1990. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Cognitive control and emotional response.pdf">Zhu, Y., Liu, L., Yang, D., Ji, H., Huang, T., Xue, L., ... & Fang, Y. (2021). Cognitive control and emotional response in attention-deficit/hyperactivity disorder comorbidity with disruptive, impulse-control, and conduct disorders. <em>BMC psychiatry</em>, 21(1), 1-13. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia.pdf">Yang, F., Zhu, H., Yu, L., Lu, W., Zhang, C., & Tian, X. (2021). Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia. <em>Behavioural Brain Research</em>, 113411. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Yu2021_Article_AlteredBrainActivityInTheBilat.pdf">Yu, L., Guo, L., Fang, X., Yang, F., Chen, Y., Wang, Y., ... & Zhang, C. (2021). Altered brain activity in the bilateral frontal cortices and neural correlation with cognitive impairment in schizophrenia. <em>Brain imaging and behavior</em>, 1-9. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Multi-scale predictions distinctively modulate tone perception in schizophrenia patients with auditory verbal hallucinations.pdf">Yang, F., Zhu, H., Yu, L., Lu, W., Zhang, C., & Tian, X. (2020) Multi-scale predictions distinctively modulate tone perception in schizophrenia patients with auditory verbal hallucinations. <em>bioRxiv</em>, 204495. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Functional Status of Hypothalamic–Pituitary–Thyroid and Hypothalamic–Pituitary–Adrenal Axes in Hospitalized Schizophrenics in Shanghai.pdf">Zhu, Y., Ji, H., Tao, L., Cai, Q., Wang, F., Ji, W., ... & Fang, Y. (2020). Functional Status of Hypothalamic–Pituitary–Thyroid and Hypothalamic–Pituitary–Adrenal Axes in Hospitalized Schizophrenics in Shanghai. <em>Frontiers in Psychiatry</em>, 11. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Effects and potential mechanisms of transcranial direct current stimulation (tDCS) on auditory hallucinations.pdf">Yang, F., Fang, X., Tang, W., Hui, L., Chen, Y., Zhang, C., & Tian, X. (2019). Effects and potential mechanisms of transcranial direct current stimulation (tDCS) on auditory hallucinations: A meta-analysis. <em>Psychiatry research</em>, 273, 343. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Manual directional gestures facilitate cross-modal perceptual learning.pdf">Zhen, A., Van Hedger, S., Heald, S., Goldin-Meadow, S., & Tian, X. (2019). Manual directional gestures facilitate cross-modal perceptual learning. <em>Cognition</em>, 187, 178-187.(PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/The functional relations among motor-based prediction, sensory goals and feedback in learning non-native speech sounds- Evidence from adult Mandarin Chinese speakers with an auditory feedback masking paradigm.pdf">Liu, X., & Tian, X. (2018). The functional relations among motor-based prediction, sensory goals and feedback in learning non-native speech sounds: Evidence from adult Mandarin Chinese speakers with an auditory feedback masking paradigm. <em>Scientific reports</em>, 8(1), 11910. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Neural response phase tracks how listeners learn new acoustic representations.pdf">Luo<em>, H., Tian</em>, X., Song, K., Zhou, K., &amp; Poeppel, D. (2013). Neural response phase tracks how listeners learn new acoustic representations. <em>Current Biology</em>. 23(11), 968–974.(*equal contribution)(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Change detection through connectivity reduction.pdf">Tian, X., &amp; Huber, D.E. (2013). Playing ‘Duck Duck Goose’ with neurons: Change detection through connectivity reduction. <em>Psychological Science</em>.24(6), 819–827.(PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/A habituation account of change detection different judgments.pdf">Davelaar, E.J., Tian, X., Weidemann, C.T., &amp; Huber, D.E. (2011). A habituation account of change detection in same/different judgments. <em>Cognitive,Affective and Behavioral Neuroscience</em>, 11,608-626.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Testing an associative account of semantic satiation.pdf">Tian, X., &amp; Huber, D.E. (2010). Testing an associative account of semantic satiation. <em>Cognitive Psychology,60</em>, 267-290.(PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The Dynamics of Integration and Separation.pdf">Huber, D. E., Tian, X., Curran, T., O’Reilly, C, &amp; Woroch, B. (2008). The dynamics of integration and separation: ERP, MEG, and neural network studies of immediate repetition effects. <em>Journal of Experimental Psychology: Human Perception and Performance</em>, 34,1389-1416.(PDF)</a></p></blockquote>
+
 		        </li>
 
 		        <li class="scrollable">
 		        	<h2>发表文章</h2>
 
 					<h4 style="text-align:left;">
-					    &LongLeftArrow;	 Topic Order
-					    <span style="float:right;">
-					        Chronological Order &LongRightArrow;
+					    &LongLeftArrow;	 主题顺序
+					    <!-- <span style="float:right;"> -->
+					        <!-- 时间顺序 &LongRightArrow; -->
 					    </span>
 					</h4>
+					<br>
+
+					<h3>2022</h3>
+					<br>
+					<blockquote><p class="to_left"><a href="papers/How characters are learned leaves its mark on the neural substrates of Chinese reading.pdf">Feng, J., Mak, H. Y., Wang, J., & Cai, Q. (2022). How characters are learned leaves its mark on the neural substrates of Chinese reading. <em>Eneuro</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/The generic inhibitory function of corollary discharge in motor intention.pdf">Zheng, X., Zhu, H., Li, S., & Tian, X. (2022). The generic inhibitory function of corollary discharge in motor intention: evidence from the modulation effects of speech preparation on the late components of auditory neural responses. <em>Eneuro</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Delta-band neural tracking primarily reflects.pdf">Lu, Y., Jin, P., Ding, N., & Tian, X. (2022). Delta-band neural tracking primarily reflects rule-based chunking instead of semantic relatedness between words. <em>Cerebral Cortex</em>. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Dual-stream cortical feedbacks mediate sensory prediction.pdf">Chu, Q., Ma, O., Hang, Y., & Tian, X. (2022). Dual-stream cortical feedbacks mediate sensory prediction. <em>bioRxiv</em>, 2022-07. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Neural signatures of second language proficiency in narrative processing.pdf">Zhang, R., Wang, J., Lin, H., Turk-Browne, N. B., & Cai, Q. (2022). Neural signatures of second language proficiency in narrative processing. <em>bioRxiv</em>, 2022-10. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Neural mechanisms of musical syntax and tonality, and the effect of musicianship.pdf">Zhang, R., Jiang, L., Tao, L., Zhou, Y. D., & Cai, Q. (2022). Neural mechanisms of musical syntax and tonality, and the effect of musicianship. <em>bioRxiv</em>, 2022-10. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/CCLOWW.pdf">Li, L., Yang, Y., Song, M., Fang, S., Zhang, M., Chen, Q., & Cai, Q. (2022). CCLOWW: A grade-level Chinese children’s lexicon of written words. <em>Behavior Research Methods</em>, 1-16. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Imagined speech can be decoded from low- and cross-frequency intracranial EEG features.pdf">Proix, T., Delgado Saa, J., Christen, A., Martin, S., Pasley, B. N., Knight, R. T., ... & Giraud, A. L. (2022). Imagined speech can be decoded from low-and cross-frequency intracranial EEG features. <em>Nature communications</em>, 13(1), 48. (PDF)</a></p></blockquote>
+
 
 					<h3>2021</h3>
 					<br>
@@ -802,6 +723,8 @@
 					<blockquote><p class="to_left"><a href="papers/Liu2021_Article_MultipleProsodicMeaningsAreCon.pdf">Liu, X., Xu, Y., Zhang, W., & Tian, X. (2021). Multiple prosodic meanings are conveyed through separate pitch ranges: Evidence from perception of focus and surprise in Mandarin Chinese. <em>Cognitive, Affective, & Behavioral Neuroscience</em>, 1-12. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia.pdf">Yang, F., Zhu, H., Yu, L., Lu, W., Zhang, C., & Tian, X. (2021). Deficits in multi-scale top-down processes distorting auditory perception in schizophrenia. <em>Behavioural Brain Research</em>, 113411. (PDF)</a></p></blockquote>
 					<blockquote><p class="to_left"><a href="papers/Manual Gestures Modulate Early Neural Responses in Loudness Perception.pdf">Sun, J., Wang, Z., & Tian, X. (2021). Manual Gestures Modulate Early Neural Responses in Loudness Perception. <em>Frontiers in neuroscience</em>, 1106. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Dissociable plasticity of visual-motor system.pdf">Yin, D., Wang, X., Zhang, X., Yu, Q., Wei, Y., Cai, Q., ... & Li, L. (2021). Dissociable plasticity of visual-motor system in functional specialization and flexibility in expert table tennis players. <em>Brain Structure and Function</em>, 226(6), 1973-1990. (PDF)</a></p></blockquote>
+					<blockquote><p class="to_left"><a href="papers/Cognitive control and emotional response.pdf">Zhu, Y., Liu, L., Yang, D., Ji, H., Huang, T., Xue, L., ... & Fang, Y. (2021). Cognitive control and emotional response in attention-deficit/hyperactivity disorder comorbidity with disruptive, impulse-control, and conduct disorders. <em>BMC psychiatry</em>, 21(1), 1-13. (PDF)</a></p></blockquote>
 
 					<h3>2020</h3>
 					<br>
@@ -899,8 +822,8 @@
 		    <div class="arrows">
 		        <label for="slides_1"></label>
 		        <label for="slides_2"></label>
-		        <label for="slides_1" class="goto-first"></label>
-		        <label for="slides_2" class="goto-last"></label>
+		        <!-- <label for="slides_1" class="goto-first"></label> -->
+		        <!-- <label for="slides_2" class="goto-last"></label> -->
 		    </div>
 		    <div class="navigation">
 			    <div>
@@ -1081,7 +1004,7 @@
 	  		<h3 class="footer-title">站外链接：</h3><!-- External Links: -->
 		  		<li><a href="https://bcs.shanghai.nyu.edu/cn">华东师范大学-纽约大学脑与认知科学联合研究中心</a></li>
 		  		<li><a href="http://psy.ecnu.edu.cn/">华东师范大学心理与认知科学学院</a></li>
-		  	<h5>Copyright (c) 2016-2022 Speech, language, and Neuroscience Group. Built by Jinbiao(Ray) Yang, inspired by <a href="https://github.com/andreagalanti/Flatfy-Free-Flat-and-Responsive-HTML5-Template">Flatfy</a> theme. Updated by Hao Zhu.</h5>
+		  	<h5>Copyright (c) 2016-2023 Speech, language, and Neuroscience Group. Built by Jinbiao(Ray) Yang, inspired by <a href="https://github.com/andreagalanti/Flatfy-Free-Flat-and-Responsive-HTML5-Template">Flatfy</a> theme. Updated by Hao Zhu.</h5>
 				<li></li>
 	  		
         </div>
@@ -1126,6 +1049,13 @@
 	<script src="js/uiMorphingButton_inflow.js"></script>
 	<!-- Magnific Popup core JS file -->
 	<script src="js/jquery.magnific-popup.js"></script> 
+
+	<script>
+		function jump(id){
+			document.querySelector('#'+id).scrollIntoView({behavior:'smooth'})
+		}
+	</script>
+
 </body>
 
 </html>
