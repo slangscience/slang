@@ -112,7 +112,7 @@ opacity: 0.95 !important;
 filter: alpha(opacity=95) !important;
 }
 
-.item .img-responsive {cursor:url(../img/cross.png),auto;}
+.item .img-responsive {cursor:zoom-in;}
 
 /* Preloader */
 #preloader {
@@ -247,18 +247,18 @@ color: #ECEBEB;
 
 .intro-header {
 	height: 85%; /* Full Page */
-	padding-top: 40px; 
+	padding-top: 153px; 
 	/*padding-bottom: 0px;*/
 	color: #f8f8f8;
 
-	background: url(../img/bg.jpg) no-repeat center center;
+	background: url(../img/raw.png) no-repeat center center;
 	background-color: #e5e5e5;
 	text-align: center;
 }
 
 .intro-header .mask {
 	background-color: #000;
-	opacity: 0.8;
+	opacity: 0.75;
 }
 
 .intro-message {
@@ -302,13 +302,17 @@ color: #ECEBEB;
 
 .content-section-a {
 	background-color: #f8f8f8;
-	padding: 80px 0; 
+	padding: 120px 0; 
+
+	scroll-margin-top: 60px;    
 }
 
 .content-section-b {
 	border-top: 1px solid #e7e7e7;
 	border-bottom: 1px solid #e7e7e7;
-	padding: 80px 0; 
+	padding: 120px 0; 
+
+	scroll-margin-top: 60px;    
 }
 
 .section-heading {
